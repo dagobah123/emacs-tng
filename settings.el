@@ -12,7 +12,7 @@
 (setq confirm-kill-emacs 'y-or-n-p)
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message "")
-(setq make-backup-files 0)
+(setq make-backup-files nil)
 (tool-bar-mode 0)
 
 ;;; settings.el ends here
