@@ -28,4 +28,17 @@
   :bind
   (("M-x" . helm-M-x)))
 
+(use-package swiper
+  :ensure t
+  :bind
+  (("C-s" . swiper)))
+
+(use-package undo-tree
+  :ensure t
+  :config (global-undo-tree-mode))
+
+(use-package rainbow-mode
+  :ensure t
+  :hook (emacs-lisp-mode text-mode lisp-mode))
+
 ;;; packages.el ends here

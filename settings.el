@@ -14,5 +14,6 @@
 (setq initial-scratch-message "")
 (setq make-backup-files nil)
 (tool-bar-mode 0)
+(winner-mode t)
 
 ;;; settings.el ends here
