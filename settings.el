@@ -10,6 +10,7 @@
 (scroll-bar-mode 0)
 (setq blink-cursor-blinks 0)
 (setq confirm-kill-emacs 'y-or-n-p)
+(setq dired-dwim-target t)
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message "")
 (setq make-backup-files nil)
