@@ -4,6 +4,13 @@
 
 ;;; Code:
 
+(setq package-archives
+      '(("gnu" . "https://elpa.gnu.org/packages/")
+        ("melpa" . "https://melpa.org/packages/")))
+(package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
+
 (use-package magit
   :ensure t
   :commands (magit-status)
@@ -40,5 +47,15 @@
 (use-package rainbow-mode
   :ensure t
   :hook (emacs-lisp-mode text-mode lisp-mode))
+
+(use-package counsel
+  :ensure t
+  :config (counsel-mode))
+
+(use-package counsel-projectile
+  :ensure t
+  :after (projectile counsel)
+  :config
+  (counsel-projectile-mode))
 
 ;;; packages.el ends here
