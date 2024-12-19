@@ -31,7 +31,7 @@
 (use-package swiper
   :ensure t
   :bind
-  (("C-s" . swiper)))
+  (("C-s" . swiper)("C-r" . swiper-thing-at-point)))
 
 (use-package undo-tree
   :ensure t
