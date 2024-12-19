@@ -51,4 +51,7 @@
   :config
   (counsel-projectile-mode))
 
+(use-package ivy-hydra
+  :ensure t)
+
 ;;; packages.el ends here
