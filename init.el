@@ -12,12 +12,11 @@
 
 (load-file (concat EMACS-HOME "/settings.el"))
 (load-file (concat EMACS-HOME "/theme/theme.el"))
+(load-file (concat EMACS-HOME "/hydra.el"))
 (load-file (concat EMACS-HOME "/keybindings.el"))
 (load-file (concat EMACS-HOME "/functions.el"))
 (load-file (concat EMACS-HOME "/functions-class-overview.el"))
 (load-file (concat EMACS-HOME "/package-archives.el"))
 (load-file (concat EMACS-HOME "/packages.el"))
-
-;(load-theme 'chiaroscuro t)
 
 ;;; init.el ends here
