@@ -1,77 +1,10 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ;;; chiaroscuro-theme.el --- Theme consisting of multiple themes
 ;;; Commentary:
 ;;; Code:
 (load-file "~/.emacs.d/theme/common/variables.el")
 (load-file "~/.emacs.d/theme/common/default.el")
 
-;; load light or dark diff colors
+; load light or dark diff colors
 (if (>= INDEX-CHIAROSCURO INDEX-HIGH-CONTRAST)
     (progn (load-file "~/.emacs.d/theme/common/diff-middle.el"))
   (progn (load-file "~/.emacs.d/theme/common/diff-light.el")))
@@ -83,42 +16,43 @@
 (if (> INDEX-CHIAROSCURO INDEX-DEFAULT)
    (progn
      (if (eq INDEX-CHIAROSCURO INDEX-ECLIPSE)
-         (load-file "~/.emacs.d/theme/light/eclipse.el"))
+	 (load-file "~/.emacs.d/theme/light/eclipse.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-CONSOLE-LIGHT)
-         (load-file "~/.emacs.d/theme/light/console-light.el"))
+	 (load-file "~/.emacs.d/theme/light/console-light.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-COLOR-CHANGE-LIGHT)
-         (load-file "~/.emacs.d/theme/color-changer/color-changer.el"))
+	 (load-file "~/.emacs.d/theme/color-changer/color-changer.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-HIGH-CONTRAST)
-         (load-file "~/.emacs.d/theme/light/high-contrast.el"))
+	 (load-file "~/.emacs.d/theme/light/high-contrast.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-GRAY)
-         (load-file "~/.emacs.d/theme/light/gray.el"))
+	 (load-file "~/.emacs.d/theme/light/gray.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-LOW-CHROMA)
-         (load-file "~/.emacs.d/theme/dark/low-chroma.el"))
+	 (load-file "~/.emacs.d/theme/dark/low-chroma.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-BLUE)
-         (load-file "~/.emacs.d/theme/dark/blue.el"))
+	 (load-file "~/.emacs.d/theme/dark/blue.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-NEON)
-         (load-file "~/.emacs.d/theme/dark/neon.el"))
+	 (load-file "~/.emacs.d/theme/dark/neon.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-CONSOLE-DARK)
-         (load-file "~/.emacs.d/theme/dark/console-dark.el"))
+	 (load-file "~/.emacs.d/theme/dark/console-dark.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-RED)
-         (load-file "~/.emacs.d/theme/dark/red.el"))
+	 (load-file "~/.emacs.d/theme/dark/red.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-CASABLANCA)
-         (load-file "~/.emacs.d/theme/dark/casablanca.el"))
+	 (load-file "~/.emacs.d/theme/dark/casablanca.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-COLOR-CHANGE-DARK)
-         (load-file "~/.emacs.d/theme/color-changer/color-changer.el"))
+	 (load-file "~/.emacs.d/theme/color-changer/color-changer.el"))
 
      ;; reset index
      (if (> INDEX-CHIAROSCURO number-of-themes) (setq INDEX-CHIAROSCURO 0))
      (if (< INDEX-CHIAROSCURO 0) (setq INDEX-CHIAROSCURO number-of-themes))
+     ))
 
-     (deftheme chiaroscuro)
+(deftheme chiaroscuro)
 
-     (custom-theme-set-faces 'chiaroscuro
+(custom-theme-set-faces 'chiaroscuro
 
 (if (eq INDEX-CHIAROSCURO INDEX-HIGH-CONTRAST)
-   (progn
-     `(default ((t (:foreground ,text-normal :background ,background :bold t )))))
- (progn `(default ((t (:foreground ,text-normal :background ,background :bold nil ))))))
+    (progn
+      `(default ((t (:foreground ,text-normal :background ,background :bold t )))))
+  (progn `(default ((t (:foreground ,text-normal :background ,background :bold nil ))))))
 
 `(ac-candidate-face ((t (:foreground ,text-normal :background ,background-fringe ))))
 `(ac-candidate-mouse-face ((t (:foreground ,text-normal :background ,background-fringe ))))
@@ -446,12 +380,12 @@
 `(xref-match ((t (:foreground ,text-highlight-1 :background unspecified :bold t ))))
 `(ztreep-diff-model-add-face ((t (:foreground ,text-highlight-1 :background unspecified ))))
 `(ztreep-diff-model-normal-face ((t (:foreground ,text-normal :background unspecified ))))
-)))
+)
 
 ;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
-               (file-name-as-directory (file-name-directory load-file-name))))
+	       (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'chiaroscuro)
 

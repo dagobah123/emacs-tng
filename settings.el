@@ -11,6 +11,7 @@
 (setq blink-cursor-blinks 0)
 (setq confirm-kill-emacs 'y-or-n-p)
 (setq dired-dwim-target t)
+(setq dired-listing-switches "-l")
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message "")
 (setq ivy-read-action-function 'ivy-hydra-read-action)

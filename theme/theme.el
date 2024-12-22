@@ -4,9 +4,21 @@
 
 ;;; Code:
 
+(setq INDEX-DEFAULT             1)
+(setq INDEX-ECLIPSE             2)
+(setq INDEX-CONSOLE-LIGHT       3)
+(setq INDEX-COLOR-CHANGE-LIGHT  4)
+(setq INDEX-HIGH-CONTRAST       5)
+(setq INDEX-GRAY                6)
+(setq INDEX-LOW-CHROMA          7)
+(setq INDEX-BLUE                8)
+(setq INDEX-NEON                9)
+(setq INDEX-CONSOLE-DARK       10)
+(setq INDEX-RED                11)
+(setq INDEX-CASABLANCA         12)
+(setq INDEX-COLOR-CHANGE-DARK  13)
+
 (setq INDEX-CHIAROSCURO 0)
-(setq iterations 1)
-(setq mode-line-fringe t)
 (setq theme-index 0)
 
 (defun my-reset-themes-index ()
@@ -77,20 +89,6 @@
       (progn (message "emacs")
              (setq theme-index 0)
              (setq INDEX-CHIAROSCURO 0))))
-
-(setq INDEX-DEFAULT             1)
-(setq INDEX-ECLIPSE             2)
-(setq INDEX-CONSOLE-LIGHT       3)
-(setq INDEX-COLOR-CHANGE-LIGHT  4)
-(setq INDEX-HIGH-CONTRAST       5)
-(setq INDEX-GRAY                6)
-(setq INDEX-LOW-CHROMA          7)
-(setq INDEX-BLUE                8)
-(setq INDEX-NEON                9)
-(setq INDEX-CONSOLE-DARK       10)
-(setq INDEX-RED                11)
-(setq INDEX-CASABLANCA         12)
-(setq INDEX-COLOR-CHANGE-DARK  13)
 
 (defvar chiaroscuro-index 0 "Index representing the current theme")
 (setq chiaroscuro-index 0)
