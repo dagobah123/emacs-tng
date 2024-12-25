@@ -59,6 +59,6 @@
   :config
   ;; Define the command to start JDTLS for Java
   (add-to-list 'eglot-server-programs
-               '(java-mode . (ECLIPSE-LS))))
+               `(java-mode . (,ECLIPSE-LS))))
 
 ;;; packages.el ends here
