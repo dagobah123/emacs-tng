@@ -54,4 +54,11 @@
 (use-package ivy-hydra
   :ensure t)
 
+(use-package eglot
+  :commands (eglot eglot-ensure)
+  :config
+  ;; Define the command to start JDTLS for Java
+  (add-to-list 'eglot-server-programs
+               '(java-mode . (ECLIPSE-LS))))
+
 ;;; packages.el ends here

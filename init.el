@@ -10,6 +10,7 @@
 (setq custom--inhibit-theme-enable nil)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/chiaroscuro-theme.el/")
 
+(load-file (concat EMACS-HOME "/paths.el"))
 (load-file (concat EMACS-HOME "/settings.el"))
 (load-file (concat EMACS-HOME "/theme/theme.el"))
 (load-file (concat EMACS-HOME "/hydra.el"))
