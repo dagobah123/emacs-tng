@@ -12,6 +12,7 @@
 
 (load-file (concat EMACS-HOME "/paths.el"))
 (load-file (concat EMACS-HOME "/settings.el"))
+(load-file (concat EMACS-HOME "/org.el"))
 (load-file (concat EMACS-HOME "/theme/theme.el"))
 (load-file (concat EMACS-HOME "/keybindings.el"))
 (load-file (concat EMACS-HOME "/functions.el"))

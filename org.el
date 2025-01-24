@@ -1,0 +1,18 @@
+;;; org.el --- org file
+;;; Commentary:
+;;; org mode settings
+
+;;; Code:
+
+(setq org-todo-keywords '((sequence "TODO" "IN-PROGRESS" "|" "DONE")))
+
+(defvar org-capture-templates)
+(defvar org-agenda-files)
+
+(setq org-capture-templates
+      '(("t" "Tasks" entry (file+headline "~/source/org-mode/agenda/tasks.org" "Tasks") "* TODO %?")
+        ("r" "Remember" entry (file+headline "~/source/org-mode/agenda/remember.org" "Remember"))))
+
+(setq org-agenda-files (list "~/source/org-mode/agenda"))
+
+;;; org.el ends here

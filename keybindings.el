@@ -33,6 +33,11 @@
   "m" #'helm-all-mark-rings
   "k" #'helm-show-kill-ring)
 
+(defvar-keymap my-prefix-map-org
+  :doc "Org keymap"
+  "c" #'org-capture
+  "o" #'org-agenda)
+
 (defvar-keymap my-prefix-map
   :doc "Main keymap"
   "b" #'bookmark-bmenu-list
@@ -40,6 +45,7 @@
   "h" #'hydra-master/body
   "i" #'imenu
   "l" #'recenter-top-bottom
+  "o" my-prefix-map-org
   "r" my-prefix-map-rings
   "s" my-prefix-map-search
   "t" my-prefix-map-theme)
