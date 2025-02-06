@@ -36,7 +36,7 @@
 (defvar-keymap my-prefix-map-org
   :doc "Org keymap"
   "c" #'org-capture
-  "o" #'org-agenda)
+  "a" #'org-agenda)
 
 (defvar-keymap my-prefix-map
   :doc "Main keymap"
