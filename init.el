@@ -19,6 +19,7 @@
 (load-file (concat EMACS-HOME "/functions-class-overview.el"))
 (load-file (concat EMACS-HOME "/package-archives.el"))
 (load-file (concat EMACS-HOME "/packages.el"))
+(load-file (concat EMACS-HOME "/dired.el"))
 (load-file (concat EMACS-HOME "/hydra.el"))
 
 ;;; init.el ends here
