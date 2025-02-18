@@ -4,53 +4,54 @@
 
 ;;; Code:
 
-(defvar-keymap my-prefix-map-theme
-  :doc "Theme keymap"
-  "1" #'default
-  "2" #'eclipse
-  "3" #'console-light
-  "4" #'color-change-light
-  "5" #'high-contrast
-  "6" #'gray
-  "7" #'low-chroma
-  "8" #'blue
-  "9" #'neon
-  "c" #'casablanca
-  "d" #'color-change-dark
-  "l" #'console-light
-  "r" #'red)
+;;; Theme keymap
+(defvar my-prefix-map-theme (make-sparse-keymap) "Theme keymap")
+(define-key my-prefix-map-theme (kbd "1") #'default)
+(define-key my-prefix-map-theme (kbd "2") #'eclipse)
+(define-key my-prefix-map-theme (kbd "3") #'console-light)
+(define-key my-prefix-map-theme (kbd "4") #'color-change-light)
+(define-key my-prefix-map-theme (kbd "5") #'high-contrast)
+(define-key my-prefix-map-theme (kbd "6") #'gray)
+(define-key my-prefix-map-theme (kbd "7") #'low-chroma)
+(define-key my-prefix-map-theme (kbd "8") #'blue)
+(define-key my-prefix-map-theme (kbd "9") #'neon)
+(define-key my-prefix-map-theme (kbd "c") #'casablanca)
+(define-key my-prefix-map-theme (kbd "d") #'color-change-dark)
+(define-key my-prefix-map-theme (kbd "l") #'console-light)
+(define-key my-prefix-map-theme (kbd "r") #'red)
 
-(defvar-keymap my-prefix-map-search
-  :doc "Search keymap"
-  "g" #'my-grep-in-project2)
+;;; Search keymap
+(defvar my-prefix-map-search (make-sparse-keymap) "Search keymap")
+(define-key my-prefix-map-search (kbd "g") #'my-grep-in-project2)
 
-(defvar-keymap my-prefix-map-code
-  :doc "Code keymap"
-  "c" #'my-class-overview)
+;;; Code keymap
+(defvar my-prefix-map-code (make-sparse-keymap) "Code keymap")
+(define-key my-prefix-map-code (kbd "c") #'my-class-overview)
 
-(defvar-keymap my-prefix-map-rings
-  :doc "Rings keymap"
-  "m" #'helm-all-mark-rings
-  "k" #'helm-show-kill-ring)
+;;; Rings keymap
+(defvar my-prefix-map-rings (make-sparse-keymap) "Rings keymap")
+(define-key my-prefix-map-rings (kbd "m") #'helm-all-mark-rings)
+(define-key my-prefix-map-rings (kbd "k") #'helm-show-kill-ring)
 
-(defvar-keymap my-prefix-map-org
-  :doc "Org keymap"
-  "c" #'org-capture
-  "a" #'org-agenda)
+;;; Org keymap
+(defvar my-prefix-map-org (make-sparse-keymap) "Org keymap")
+(define-key my-prefix-map-org (kbd "c") #'org-capture)
+(define-key my-prefix-map-org (kbd "a") #'org-agenda)
 
-(defvar-keymap my-prefix-map
-  :doc "Main keymap"
-  "b" #'bookmark-bmenu-list
-  "c" my-prefix-map-code
-  "h" #'hydra-master/body
-  "i" #'imenu
-  "l" #'recenter-top-bottom
-  "o" my-prefix-map-org
-  "r" my-prefix-map-rings
-  "s" my-prefix-map-search
-  "t" my-prefix-map-theme)
+;;; Main keymap
+(defvar my-prefix-map (make-sparse-keymap) "Main keymap")
+(define-key my-prefix-map (kbd "b") #'bookmark-bmenu-list)
+(define-key my-prefix-map (kbd "c") my-prefix-map-code)
+(define-key my-prefix-map (kbd "h") #'hydra-master/body)
+(define-key my-prefix-map (kbd "i") #'imenu)
+(define-key my-prefix-map (kbd "l") #'recenter-top-bottom)
+(define-key my-prefix-map (kbd "o") my-prefix-map-org)
+(define-key my-prefix-map (kbd "r") my-prefix-map-rings)
+(define-key my-prefix-map (kbd "s") my-prefix-map-search)
+(define-key my-prefix-map (kbd "t") my-prefix-map-theme)
 
-(keymap-set global-map "C-l" my-prefix-map)
+;; Bind main keymap to "C-l"
+(global-set-key (kbd "C-l") my-prefix-map)
 
 ;;; helper functions
 

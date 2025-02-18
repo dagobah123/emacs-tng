@@ -14,6 +14,7 @@
 (setq initial-scratch-message "")
 (setq ivy-read-action-function 'ivy-hydra-read-action)
 (setq make-backup-files nil)
+(setq package-check-signature nil)
 (setq visible-bell t)
 (tool-bar-mode 0)
 (winner-mode t)

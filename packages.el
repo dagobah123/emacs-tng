@@ -4,6 +4,10 @@
 
 ;;; Code:
 
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
 (use-package magit
   :ensure t
   :commands (magit-status)
