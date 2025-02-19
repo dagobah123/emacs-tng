@@ -16,7 +16,7 @@
 (use-package projectile
   :ensure t
   :diminish projectile-mode
-  :config (projectile-mode)
+  :config (projectile-mode) (projectile-load-known-projects)
   :bind-keymap
   ("C-l p" . projectile-command-map))
 
