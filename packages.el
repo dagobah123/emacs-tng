@@ -10,15 +10,12 @@
 
 (use-package magit
   :ensure t
-  :commands (magit-status)
-  :bind (("C-l v" . magit-status)))
+  :commands (magit-status))
 
 (use-package projectile
   :ensure t
   :diminish projectile-mode
-  :config (projectile-mode) (projectile-load-known-projects)
-  :bind-keymap
-  ("C-l p" . projectile-command-map))
+  :config (projectile-mode) (projectile-load-known-projects))
 
 (use-package which-key
   :ensure t
@@ -64,5 +61,8 @@
   ;; Define the command to start JDTLS for Java
   (add-to-list 'eglot-server-programs
                `(java-mode . (,ECLIPSE-LS))))
+
+(use-package powershell
+  :ensure t)
 
 ;;; packages.el ends here

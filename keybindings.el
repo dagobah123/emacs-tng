@@ -23,10 +23,12 @@
 ;;; Search keymap
 (defvar my-prefix-map-search (make-sparse-keymap) "Search keymap")
 (define-key my-prefix-map-search (kbd "g") #'my-grep-in-project2)
+(define-key my-prefix-map-search (kbd "o") #'occur)
 
 ;;; Code keymap
 (defvar my-prefix-map-code (make-sparse-keymap) "Code keymap")
 (define-key my-prefix-map-code (kbd "c") #'my-class-overview)
+(define-key my-prefix-map-code (kbd "i") #'imenu)
 
 ;;; Rings keymap
 (defvar my-prefix-map-rings (make-sparse-keymap) "Rings keymap")
@@ -40,7 +42,7 @@
 
 ;;; Main keymap
 (defvar my-prefix-map (make-sparse-keymap) "Main keymap")
-(define-key my-prefix-map (kbd "b") #'bookmark-bmenu-list)
+(define-key my-prefix-map (kbd "b") #'helm-bookmarks)
 (define-key my-prefix-map (kbd "c") my-prefix-map-code)
 (define-key my-prefix-map (kbd "h") #'hydra-master/body)
 (define-key my-prefix-map (kbd "i") #'imenu)
