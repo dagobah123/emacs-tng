@@ -29,6 +29,8 @@
 (defvar my-prefix-map-code (make-sparse-keymap) "Code keymap")
 (define-key my-prefix-map-code (kbd "c") #'my-class-overview)
 (define-key my-prefix-map-code (kbd "i") #'imenu)
+(define-key my-prefix-map-code (kbd "p") #'counsel-projectile-find-file)
+(define-key my-prefix-map-code (kbd "s") #'counsel-projectile-switch-project)
 
 ;;; Rings keymap
 (defvar my-prefix-map-rings (make-sparse-keymap) "Rings keymap")
