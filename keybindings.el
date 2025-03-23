@@ -25,12 +25,16 @@
 (define-key my-prefix-map-search (kbd "g") #'my-grep-in-project2)
 (define-key my-prefix-map-search (kbd "o") #'occur)
 
-;;; Code keymap
-(defvar my-prefix-map-code (make-sparse-keymap) "Code keymap")
-(define-key my-prefix-map-code (kbd "c") #'my-class-overview)
-(define-key my-prefix-map-code (kbd "i") #'imenu)
-(define-key my-prefix-map-code (kbd "p") #'counsel-projectile-find-file)
-(define-key my-prefix-map-code (kbd "s") #'counsel-projectile-switch-project)
+;;; Editor keymap
+(defvar my-prefix-map-editor (make-sparse-keymap) "Editor keymap")
+(define-key my-prefix-map-editor (kbd "C") #'my-class-overview)
+(define-key my-prefix-map-editor (kbd "i") #'imenu)
+(define-key my-prefix-map-editor (kbd "a") #'back-to-indentation)
+
+;;; Projectile keymap
+(defvar my-prefix-map-projectile (make-sparse-keymap) "Projectile keymap")
+(define-key my-prefix-map-projectile (kbd "f") #'counsel-projectile-find-file)
+(define-key my-prefix-map-projectile (kbd "p") #'counsel-projectile-switch-project)
 
 ;;; Rings keymap
 (defvar my-prefix-map-rings (make-sparse-keymap) "Rings keymap")
@@ -44,12 +48,13 @@
 
 ;;; Main keymap
 (defvar my-prefix-map (make-sparse-keymap) "Main keymap")
+(define-key my-prefix-map (kbd "C-l") #'er/expand-region)
 (define-key my-prefix-map (kbd "b") #'helm-bookmarks)
-(define-key my-prefix-map (kbd "c") my-prefix-map-code)
+(define-key my-prefix-map (kbd "e") my-prefix-map-editor)
 (define-key my-prefix-map (kbd "h") #'hydra-master/body)
-(define-key my-prefix-map (kbd "i") #'imenu)
 (define-key my-prefix-map (kbd "l") #'recenter-top-bottom)
 (define-key my-prefix-map (kbd "o") my-prefix-map-org)
+(define-key my-prefix-map (kbd "p") my-prefix-map-projectile)
 (define-key my-prefix-map (kbd "r") my-prefix-map-rings)
 (define-key my-prefix-map (kbd "s") my-prefix-map-search)
 (define-key my-prefix-map (kbd "t") my-prefix-map-theme)

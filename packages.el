@@ -65,4 +65,7 @@
 (use-package powershell
   :ensure t)
 
+(use-package expand-region
+  :ensure t)
+
 ;;; packages.el ends here
