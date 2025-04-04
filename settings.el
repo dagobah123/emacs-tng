@@ -17,7 +17,7 @@
 (setq package-check-signature nil) ;;; Disable package signature check.
 (setq projectile-globally-ignored-directories '(".target" "target")) ;;; Globally ignored directories
 (setq projectile-globally-ignored-files '("*.~undo-tree~")) ;;; Globally ignored files
-(setq visible-bell t) ;;; Make bell visual.
+(setq ring-bell-function 'ignore)
 (setq-default tab-width 4) ;;; Set tab width to 4 spaces.
 (setq-default truncate-lines t) ;;; Long lines will not wrap.
 (show-paren-mode t) ;;; Show matching parentheses.

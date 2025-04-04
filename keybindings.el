@@ -6,18 +6,16 @@
 
 ;;; Theme keymap
 (defvar my-prefix-map-theme (make-sparse-keymap) "Theme keymap")
-(define-key my-prefix-map-theme (kbd "1") #'default)
-(define-key my-prefix-map-theme (kbd "2") #'eclipse)
-(define-key my-prefix-map-theme (kbd "3") #'console-light)
-(define-key my-prefix-map-theme (kbd "4") #'color-change-light)
-(define-key my-prefix-map-theme (kbd "5") #'high-contrast)
-(define-key my-prefix-map-theme (kbd "6") #'gray)
-(define-key my-prefix-map-theme (kbd "7") #'low-chroma)
-(define-key my-prefix-map-theme (kbd "8") #'blue)
-(define-key my-prefix-map-theme (kbd "9") #'neon)
+(define-key my-prefix-map-theme (kbd "D") #'color-change-dark)
+(define-key my-prefix-map-theme (kbd "L") #'color-change-light)
+(define-key my-prefix-map-theme (kbd "b") #'blue)
 (define-key my-prefix-map-theme (kbd "c") #'casablanca)
-(define-key my-prefix-map-theme (kbd "d") #'color-change-dark)
-(define-key my-prefix-map-theme (kbd "l") #'console-light)
+(define-key my-prefix-map-theme (kbd "d") #'default)
+(define-key my-prefix-map-theme (kbd "e") #'eclipse)
+(define-key my-prefix-map-theme (kbd "g") #'gray)
+(define-key my-prefix-map-theme (kbd "h") #'high-contrast)
+(define-key my-prefix-map-theme (kbd "l") #'low-chroma)
+(define-key my-prefix-map-theme (kbd "n") #'neon)
 (define-key my-prefix-map-theme (kbd "r") #'red)
 
 ;;; Search keymap
@@ -71,10 +69,6 @@
 (defun eclipse ()
   (interactive)
   (my-set-theme INDEX-ECLIPSE))
-
-(defun console-light ()
-  (interactive)
-  (my-set-theme INDEX-CONSOLE-LIGHT))
 
 (defun color-change-light ()
   (interactive)

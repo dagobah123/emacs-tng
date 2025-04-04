@@ -31,6 +31,7 @@
 
 (defhydra hydra-master (:color blue)
   ""
+  ("c" hydra-custom/body "Custom")
   ("r" hydra-registers/body "Registers")
   ("q" nil "Quit" :color red))
 
