@@ -25,9 +25,11 @@
 
 ;;; Editor keymap
 (defvar my-prefix-map-editor (make-sparse-keymap) "Editor keymap")
-(define-key my-prefix-map-editor (kbd "C") #'my-class-overview)
+(define-key my-prefix-map-editor (kbd "c") #'my-class-overview)
 (define-key my-prefix-map-editor (kbd "i") #'imenu)
 (define-key my-prefix-map-editor (kbd "a") #'back-to-indentation)
+(define-key my-prefix-map-editor (kbd "l") #'display-line-numbers-mode)
+(define-key my-prefix-map-editor (kbd "w") #'whitespace-mode)
 
 ;;; Projectile keymap
 (defvar my-prefix-map-projectile (make-sparse-keymap) "Projectile keymap")
@@ -59,6 +61,8 @@
 
 ;; Bind main keymap to "C-l"
 (global-set-key (kbd "C-l") my-prefix-map)
+
+(global-set-key (kbd "C-x C-b") 'switch-to-buffer)
 
 ;;; helper functions
 
