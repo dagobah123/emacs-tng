@@ -20,14 +20,18 @@
 
 ;;; Search keymap
 (defvar my-prefix-map-search (make-sparse-keymap) "Search keymap")
-(define-key my-prefix-map-search (kbd "g") #'my-grep-in-project2)
+(define-key my-prefix-map-search (kbd "1") #'my-grep-in-project-at-least-one-match-in-line)
+(define-key my-prefix-map-search (kbd "e") #'my-grep-in-project-exact)
+(define-key my-prefix-map-search (kbd "g") #'my-grep-in-project-multiple-matches-in-line)
 (define-key my-prefix-map-search (kbd "o") #'occur)
 
 ;;; Editor keymap
 (defvar my-prefix-map-editor (make-sparse-keymap) "Editor keymap")
+(define-key my-prefix-map-editor (kbd "<left>") #'scroll-right)
+(define-key my-prefix-map-editor (kbd "<right>") #'scroll-left)
+(define-key my-prefix-map-editor (kbd "a") #'back-to-indentation)
 (define-key my-prefix-map-editor (kbd "c") #'my-class-overview)
 (define-key my-prefix-map-editor (kbd "i") #'imenu)
-(define-key my-prefix-map-editor (kbd "a") #'back-to-indentation)
 (define-key my-prefix-map-editor (kbd "l") #'display-line-numbers-mode)
 (define-key my-prefix-map-editor (kbd "w") #'whitespace-mode)
 
