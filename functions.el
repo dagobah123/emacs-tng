@@ -7,18 +7,18 @@
 (defun my-grep-in-project-at-least-one-match-in-line (search-strings)
   "Search for the exact case insensitive match using vc-git-grep and display simplified output."
   (interactive "MEnter search strings (space-separated): ")
-  (my-grep-in-project2 search-strings "git --no-pager grep -n -E -i --break -e %s" " -e "))
+  (my-grep-in-project2 search-strings "git --no-pager grep -n -E --break -e %s" " -e "))
 
 (defun my-grep-in-project-multiple-matches-in-line (search-strings)
   "Search for multiple strings using vc-git-grep and display simplified output."
   (interactive "MEnter search strings (space-separated): ")
-  (my-grep-in-project2 search-strings "git --no-pager grep -n -E -i --all-match -e %s" " --and -e "))
+  (my-grep-in-project2 search-strings "git --no-pager grep -n -E --all-match -e %s" " --and -e "))
 
 (defun my-grep-in-project-exact (search-string)
   "Search for the exact case insensitive match using vc-git-grep and display simplified output."
   (interactive "sExact search string: ")
   (let* ((quoted (shell-quote-argument (format "%s" search-string)))
-         (grep-command (concat "git --no-pager grep -n -E -i --break "
+         (grep-command (concat "git --no-pager grep -n -E --break "
                              quoted " "
                              (projectile-project-root))))
     (compilation-start grep-command 'grep-mode)))

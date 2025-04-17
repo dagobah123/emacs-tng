@@ -13,7 +13,7 @@
 (setq text-comment "#5f5cc7")
 (setq text-constant "#82ce8a")
 (setq text-function "#4cb0b3")
-(setq text-highlight-1 "#ae67ad")
+(setq text-highlight-1 "#ae51ad")
 (setq text-highlight-2 "#00b2c1")
 (setq text-highlight-3 "#9b9328")
 (setq text-info "#555577")
