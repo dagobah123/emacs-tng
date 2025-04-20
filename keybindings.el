@@ -29,10 +29,12 @@
 (defvar my-prefix-map-editor (make-sparse-keymap) "Editor keymap")
 (define-key my-prefix-map-editor (kbd "<left>") #'scroll-right)
 (define-key my-prefix-map-editor (kbd "<right>") #'scroll-left)
-(define-key my-prefix-map-editor (kbd "a") #'back-to-indentation)
 (define-key my-prefix-map-editor (kbd "c") #'my-class-overview)
+(define-key my-prefix-map-editor (kbd "d") #'my-duplicate-line)
+(define-key my-prefix-map-editor (kbd "e") #'iedit)
 (define-key my-prefix-map-editor (kbd "i") #'imenu)
 (define-key my-prefix-map-editor (kbd "l") #'display-line-numbers-mode)
+(define-key my-prefix-map-editor (kbd "o") #'olivetti-mode)
 (define-key my-prefix-map-editor (kbd "w") #'whitespace-mode)
 
 ;;; Projectile keymap
@@ -66,6 +68,10 @@
 ;; Bind main keymap to "C-l"
 (global-set-key (kbd "C-l") my-prefix-map)
 
+(global-set-key (kbd "C-,") 'avy-goto-char-2)
+(global-set-key (kbd "C-<") 'completion-at-point)
+(global-set-key (kbd "C-b") 'counsel-projectile-switch-to-buffer)
+(global-set-key (kbd "C-f") 'counsel-projectile-find-file)
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
 
 ;;; helper functions

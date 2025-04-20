@@ -4,6 +4,7 @@
 
 ;;; Code:
 
+(abbrev-mode t) ;;; Enable abbrev mode.
 (display-time) ;;; Display time in mode-line.
 (fset 'yes-or-no-p 'y-or-n-p) ;;; Use y and n instead of yes and no.
 (menu-bar-mode 0) ;;; Disable menu bar.

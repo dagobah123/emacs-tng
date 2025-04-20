@@ -22,6 +22,7 @@
 (load-file (concat EMACS-HOME "/hydra.el"))
 (load-file (concat EMACS-HOME "/font.el"))
 (load-file (concat EMACS-HOME "/custom.el"))
+(load-file (concat EMACS-HOME "/macros.el"))
 (load-file (concat EMACS-HOME "/keybindings.el"))
 
 ;;; init.el ends here

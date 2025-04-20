@@ -37,4 +37,14 @@
       (while (search-forward-regexp (rx bol (group (1+ digit)) ":" (group (1+ not-newline)) eol) nil t)
         (replace-match (format "%s:%s" (file-name-nondirectory (match-string 2)) (match-string 1)))))))
 
+(defun my-duplicate-line ()
+  "Duplicate line at point."
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank))
+
 ;;; functions.el ends here

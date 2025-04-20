@@ -68,4 +68,16 @@
 (use-package expand-region
   :ensure t)
 
+(use-package csharp-mode
+  :ensure t)
+
+(use-package avy
+  :ensure t)
+
+(use-package iedit
+  :ensure t)
+
+(use-package olivetti
+  :ensure t)
+
 ;;; packages.el ends here
