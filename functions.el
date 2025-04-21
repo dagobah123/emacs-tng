@@ -54,4 +54,10 @@
   (newline)
   (c-indent-line-or-region))
 
+(defun my-format-csharp ()
+  "Format csharp buffer."
+  (interactive)
+  (while (re-search-forward ")" nil t)
+    (newline)))
+
 ;;; functions.el ends here

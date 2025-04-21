@@ -45,13 +45,13 @@
 
 ;;; Rings keymap
 (defvar my-prefix-map-rings (make-sparse-keymap) "Rings keymap")
-(define-key my-prefix-map-rings (kbd "m") #'helm-all-mark-rings)
 (define-key my-prefix-map-rings (kbd "k") #'helm-show-kill-ring)
+(define-key my-prefix-map-rings (kbd "m") #'helm-all-mark-rings)
 
 ;;; Org keymap
 (defvar my-prefix-map-org (make-sparse-keymap) "Org keymap")
-(define-key my-prefix-map-org (kbd "c") #'org-capture)
 (define-key my-prefix-map-org (kbd "a") #'org-agenda)
+(define-key my-prefix-map-org (kbd "c") #'org-capture)
 
 ;;; Main keymap
 (defvar my-prefix-map (make-sparse-keymap) "Main keymap")
@@ -70,7 +70,7 @@
 (global-set-key (kbd "C-l") my-prefix-map)
 
 (global-set-key (kbd "C-,") 'avy-goto-char-2)
-(global-set-key (kbd "C-<") 'completion-at-point)
+(global-set-key (kbd "C-<") 'dabbrev-completion)
 (global-set-key (kbd "C-b") 'counsel-projectile-switch-to-buffer)
 (global-set-key (kbd "C-f") 'counsel-projectile-find-file)
 (global-set-key (kbd "C-p") 'counsel-projectile-switch-project)

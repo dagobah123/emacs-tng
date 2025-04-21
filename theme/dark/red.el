@@ -22,7 +22,7 @@
 (setq text-diff-added-highlight "#52ad3c")
 (setq text-diff-removed "#554444")
 (setq text-diff-removed-highlight "#ca6666")
-(setq text-function "#cd4c4c")
+(setq text-function "#69a956")
 (setq text-highlight-1 "#69a956")
 (setq text-highlight-2 "#ad8d11")
 (setq text-highlight-3 "#cd5c5c")
