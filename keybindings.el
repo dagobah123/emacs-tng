@@ -34,6 +34,7 @@
 (define-key my-prefix-map-editor (kbd "e") #'iedit)
 (define-key my-prefix-map-editor (kbd "i") #'imenu)
 (define-key my-prefix-map-editor (kbd "l") #'display-line-numbers-mode)
+(define-key my-prefix-map-editor (kbd "n") #'my-new-line)
 (define-key my-prefix-map-editor (kbd "o") #'olivetti-mode)
 (define-key my-prefix-map-editor (kbd "w") #'whitespace-mode)
 
@@ -72,6 +73,7 @@
 (global-set-key (kbd "C-<") 'completion-at-point)
 (global-set-key (kbd "C-b") 'counsel-projectile-switch-to-buffer)
 (global-set-key (kbd "C-f") 'counsel-projectile-find-file)
+(global-set-key (kbd "C-p") 'counsel-projectile-switch-project)
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
 
 ;;; helper functions

@@ -47,4 +47,11 @@
   (next-line 1)
   (yank))
 
+(defun my-new-line ()
+  "Create a new line below the current line."
+  (interactive)
+  (move-end-of-line nil)
+  (newline)
+  (c-indent-line-or-region))
+
 ;;; functions.el ends here
