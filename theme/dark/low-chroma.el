@@ -9,13 +9,11 @@
 (setq background-diff-added-highlight "#2c672c")
 (setq background-diff-removed "#441e1e")
 (setq background-diff-removed-highlight "#882929")
-(setq background-fringe "#0a0a0a")
 (setq background-low "#222222")
 (setq background-magit "#0a0a0a")
 (setq background-magit-branch-local "#007700")
 (setq background-magit-branch-remote "#770000")
 (setq background-magit-dark "#000000")
-(setq background-mode-line "#111111")
 (setq text-comment "#867d91")
 (setq text-constant "#674c87")
 (setq text-diff-added "#445544")
@@ -37,6 +35,5 @@
 (setq text-type "#9098a7")
 (setq text-variable "#a19d7c")
 (setq text-warning "#ff7c37")
-(setq text-whitespace "#e68c8a")
 
 ;;; low-chroma.el ends here

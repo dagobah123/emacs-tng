@@ -5,16 +5,14 @@
 (load-file "~/.emacs.d/theme/common/variables.el")
 
 (setq background "#000000")
-(setq background-fringe "#111111")
 (setq background-low "#271b27")
 (setq background-magit "#1d151d")
 (setq background-magit-dark "#000000")
-(setq background-mode-line "#151515")
 (setq text-comment "#63b9b5")
 (setq text-constant "#82ce8a")
 (setq text-function "#c19b2a")
-(setq text-highlight-1 "#ae51ad")
-(setq text-highlight-2 "#c19b2a")
+(setq text-highlight-1 "#d94fd8")
+(setq text-highlight-2 "#d6a513")
 (setq text-highlight-3 "#45cf54")
 (setq text-info "#555577")
 (setq text-keyword "#555577")
@@ -26,6 +24,5 @@
 (setq text-preprocessor "#009900")
 (setq text-type "#bb4f80")
 (setq text-variable "#ffa143")
-(setq text-whitespace "#8b3a62")
 
 ;;; neon.el ends here
