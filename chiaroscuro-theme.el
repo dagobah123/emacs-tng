@@ -16,29 +16,29 @@
 (if (> INDEX-CHIAROSCURO INDEX-DEFAULT)
    (progn
      (if (eq INDEX-CHIAROSCURO INDEX-ECLIPSE)
-	 (load-file "~/.emacs.d/theme/light/eclipse.el"))
+     (load-file "~/.emacs.d/theme/light/eclipse.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-CONSOLE-LIGHT)
-	 (load-file "~/.emacs.d/theme/light/console-light.el"))
+     (load-file "~/.emacs.d/theme/light/console-light.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-COLOR-CHANGE-LIGHT)
-	 (load-file "~/.emacs.d/theme/color-changer/color-changer.el"))
+     (load-file "~/.emacs.d/theme/color-changer/color-changer.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-HIGH-CONTRAST)
-	 (load-file "~/.emacs.d/theme/light/high-contrast.el"))
+     (load-file "~/.emacs.d/theme/light/high-contrast.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-GRAY)
-	 (load-file "~/.emacs.d/theme/light/gray.el"))
+     (load-file "~/.emacs.d/theme/light/gray.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-LOW-CHROMA)
-	 (load-file "~/.emacs.d/theme/dark/low-chroma.el"))
+     (load-file "~/.emacs.d/theme/dark/low-chroma.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-BLUE)
-	 (load-file "~/.emacs.d/theme/dark/blue.el"))
+     (load-file "~/.emacs.d/theme/dark/blue.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-NEON)
-	 (load-file "~/.emacs.d/theme/dark/neon.el"))
+     (load-file "~/.emacs.d/theme/dark/neon.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-CONSOLE-DARK)
-	 (load-file "~/.emacs.d/theme/dark/console-dark.el"))
+     (load-file "~/.emacs.d/theme/dark/console-dark.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-RED)
-	 (load-file "~/.emacs.d/theme/dark/red.el"))
+     (load-file "~/.emacs.d/theme/dark/red.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-CASABLANCA)
-	 (load-file "~/.emacs.d/theme/dark/casablanca.el"))
+     (load-file "~/.emacs.d/theme/dark/casablanca.el"))
      (if (eq INDEX-CHIAROSCURO INDEX-COLOR-CHANGE-DARK)
-	 (load-file "~/.emacs.d/theme/color-changer/color-changer.el"))
+     (load-file "~/.emacs.d/theme/color-changer/color-changer.el"))
 
      ;; reset index
      (if (> INDEX-CHIAROSCURO number-of-themes) (setq INDEX-CHIAROSCURO 0))
@@ -386,7 +386,7 @@
 ;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
-	       (file-name-as-directory (file-name-directory load-file-name))))
+           (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'chiaroscuro)
 
