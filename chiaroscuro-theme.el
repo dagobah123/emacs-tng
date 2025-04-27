@@ -4,14 +4,15 @@
 (load-file "~/.emacs.d/theme/common/variables.el")
 (load-file "~/.emacs.d/theme/common/default.el")
 
-; load light or dark diff colors
+;;; load light or dark diff colors
 (if (>= INDEX-CHIAROSCURO INDEX-HIGH-CONTRAST)
     (progn (load-file "~/.emacs.d/theme/common/diff-middle.el"))
   (progn (load-file "~/.emacs.d/theme/common/diff-light.el")))
 
-;; dark themes start here
+;;; dark themes start here
 (if (>= INDEX-CHIAROSCURO INDEX-LOW-CHROMA)
-    (load-file "~/.emacs.d/theme/common/dark.el"))
+    (load-file "~/.emacs.d/theme/common/dark.el")
+  (load-file "~/.emacs.d/theme/common/light.el"))
 
 (if (> INDEX-CHIAROSCURO INDEX-DEFAULT)
    (progn
@@ -72,6 +73,7 @@
 `(company-tooltip-selection ((t (:foreground ,text-highlight-1 :background ,background-fringe :bold t ))))
 `(compilation-info ((t (:foreground ,text-highlight-1 :bold t :underline t ))))
 `(cua-rectangle ((t (:foreground ,text-highlight-1 :background ,background-region :bold t ))))
+`(cursor ((t (:background ,background-cursor ))))
 `(custom-button ((t (:foreground ,text-highlight-1 :background ,background-mode-line ))))
 `(diff-file-header ((t (:foreground ,text-highlight-1 :background ,background-magit :bold t ))))
 `(diff-header ((t (:foreground ,text-highlight-1 :background ,background-magit ))))
@@ -275,10 +277,8 @@
 `(message-header-subject ((t (:foreground ,text-normal ))))
 `(message-header-to ((t (:foreground ,text-normal ))))
 `(minibuffer-prompt ((t (:foreground ,text-normal :background unspecified ))))
-`(mode-line ((t (:foreground ,text-highlight-3 :bold t :background ,background-mode-line :box (:line-width 8 :color ,background-mode-line) ))))
-;;;`(mode-line-buffer-id ((t (:foreground ,text-normal :bold t ))))
-`(mode-line-highlight ((t (:foreground ,text-highlight-3 :background ,background-mode-line))))
-`(mode-line-inactive ((t (:foreground ,text-low :background ,background-mode-line-inactive :box (:line-width 8 :color ,background-mode-line-inactive) ))))
+`(mode-line ((t (:foreground ,text-mode-line :background ,background-mode-line :box (:line-width 8 :color ,background-mode-line) ))))
+`(mode-line-inactive ((t (:foreground ,text-mode-line-inactive :background ,background-mode-line-inactive :box (:line-width 8 :color ,background-mode-line-inactive) ))))
 `(org-agenda-column-dateline ((t (:foreground ,text-normal :underline t ))))
 `(org-agenda-date ((t (:foreground ,text-low :bold t ))))
 `(org-agenda-date-today ((t (:foreground ,text-normal :bold t :italic t ))))
@@ -336,7 +336,7 @@
 `(popup-scroll-bar-foreground-face ((t (:foreground ,text-normal :background ,background-mode-line :bold nil :italic nil ))))
 `(popup-summary-face ((t (:foreground ,text-normal :background ,background-fringe :bold nil :italic nil ))))
 `(popup-tip-face ((t (:foreground ,text-normal :background ,background-fringe :bold nil :italic nil ))))
-`(region ((t (:foreground "#000000" :background ,background-region ))))
+`(region ((t (:foreground ,text-region :background ,background-region ))))
 `(secondary-selection ((t (:foreground ,text-highlight-1 :background unspecified ))))
 `(show-paren-match ((t (:foreground ,text-highlight-1 :background unspecified :bold t ))))
 `(shr-link ((t (:foreground ,text-link :background ,background :underline t ))))
@@ -378,6 +378,7 @@
 `(whitespace-line ((t (:background unspecified ))))
 `(whitespace-newline ((t (:foreground ,text-whitespace :background unspecified ))))
 `(whitespace-space ((t (:foreground ,text-whitespace :background unspecified ))))
+`(whitespace-tab ((t (:foreground ,text-whitespace :background unspecified ))))
 `(xref-match ((t (:foreground ,text-highlight-1 :background unspecified :bold t ))))
 `(ztreep-diff-model-add-face ((t (:foreground ,text-highlight-1 :background unspecified ))))
 `(ztreep-diff-model-normal-face ((t (:foreground ,text-normal :background unspecified ))))

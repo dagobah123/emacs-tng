@@ -6,8 +6,6 @@
 
 (setq background "#000000")
 (setq background-low "#271b27")
-(setq background-magit "#1d151d")
-(setq background-magit-dark "#000000")
 (setq text-comment "#63b9b5")
 (setq text-constant "#82ce8a")
 (setq text-function "#c19b2a")

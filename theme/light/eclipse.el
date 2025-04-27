@@ -5,11 +5,7 @@
 (load-file "~/.emacs.d/theme/common/variables.el")
 
 (setq background "#ffffff")
-(setq background-fringe "#eeeeee")
 (setq background-low "#ededed")
-(setq background-magit "#eeeeee")
-(setq background-magit-dark "#f2f2f2")
-(setq background-mode-line "#cccccc")
 (setq text-comment "#5577cd")
 (setq text-constant "#000000")
 (setq text-function "#000000")
@@ -25,6 +21,5 @@
 (setq text-preprocessor "#afafaf")
 (setq text-type "#7f0055")
 (setq text-variable "#0000c0")
-(setq text-whitespace "#afafaf")
 
 ;;; eclipse.el ends here

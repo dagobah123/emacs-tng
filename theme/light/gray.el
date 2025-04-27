@@ -5,11 +5,7 @@
 (load-file "~/.emacs.d/theme/common/variables.el")
 
 (setq background "#dddddd")
-(setq background-fringe "#cccccc")
 (setq background-low "#cccccc")
-(setq background-magit "#cccccc")
-(setq background-magit-dark "#cccccc")
-(setq background-mode-line "#bbbbbb")
 (setq text-comment "#444444")
 (setq text-constant "#000000")
 (setq text-function "#000000")

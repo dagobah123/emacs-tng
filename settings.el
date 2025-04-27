@@ -7,6 +7,7 @@
 (abbrev-mode t) ;;; Enable abbrev mode.
 (display-time) ;;; Display time in mode-line.
 (fset 'yes-or-no-p 'y-or-n-p) ;;; Use y and n instead of yes and no.
+(global-hl-line-mode t) ;;; Enable global hl line.
 (menu-bar-mode 0) ;;; Disable menu bar.
 (scroll-bar-mode 0) ;;; Disable scroll bar.
 (setq blink-cursor-blinks 0) ;;; Make cursor blink forever.

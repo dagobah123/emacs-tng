@@ -60,4 +60,16 @@
   (while (re-search-forward ")" nil t)
     (newline)))
 
+(defun my-magit ()
+  "Open magit in one window."
+  (interactive)
+  (projectile-vc)
+  (delete-other-windows))
+
+(defun my-magit-log ()
+  "Open magit log in one window."
+  (interactive)
+  (magit-log-current nil nil)
+  (delete-other-windows))
+
 ;;; functions.el ends here
