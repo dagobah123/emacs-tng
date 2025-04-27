@@ -21,6 +21,6 @@
 (setq text-normal "#548648")
 (setq text-preprocessor "#834076")
 (setq text-type "#d47eb6")
-(setq text-variable "#684962")
+(setq text-variable "#8c2378")
 
 ;;; neon.el ends here
