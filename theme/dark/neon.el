@@ -6,9 +6,9 @@
 
 (setq background "#000000")
 (setq background-low "#271b27")
-(setq text-comment "#63b9b5")
+(setq text-comment "#bb4f80")
 (setq text-constant "#82ce8a")
-(setq text-function "#c19b2a")
+(setq text-function "#ffa143")
 (setq text-highlight-1 "#d94fd8")
 (setq text-highlight-2 "#d6a513")
 (setq text-highlight-3 "#45cf54")
@@ -19,8 +19,8 @@
 (setq text-low "#834076")
 (setq text-lower "#684962")
 (setq text-normal "#548648")
-(setq text-preprocessor "#009900")
-(setq text-type "#bb4f80")
-(setq text-variable "#ffa143")
+(setq text-preprocessor "#834076")
+(setq text-type "#d47eb6")
+(setq text-variable "#684962")
 
 ;;; neon.el ends here
