@@ -80,4 +80,7 @@
 (use-package olivetti
   :ensure t)
 
+(use-package ag
+  :ensure t)
+
 ;;; packages.el ends here

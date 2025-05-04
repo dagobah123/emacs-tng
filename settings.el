@@ -10,6 +10,7 @@
 (global-hl-line-mode t) ;;; Enable global hl line.
 (menu-bar-mode 0) ;;; Disable menu bar.
 (scroll-bar-mode 0) ;;; Disable scroll bar.
+(setq ag-arguments '("--java")) ;;; Set additional ag arguments.
 (setq blink-cursor-blinks 0) ;;; Make cursor blink forever.
 (setq confirm-kill-emacs 'y-or-n-p) ;;; Ask if Emacs should be closed.
 (setq inhibit-startup-screen t) ;;; Disable startup screen.

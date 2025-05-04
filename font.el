@@ -10,5 +10,7 @@
        (progn (setq default-font-size 200) (setq font-size 200))))
 (set-face-attribute 'default nil :height font-size)
 
+(set-frame-font "DejaVu Sans Mono 16" nil t)
+
 ;;; font.el ends here
 
