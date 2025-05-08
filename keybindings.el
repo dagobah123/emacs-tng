@@ -75,10 +75,14 @@
 
 (global-set-key (kbd "C-,") 'avy-goto-char-2)
 (global-set-key (kbd "C-<") 'dabbrev-completion)
+(global-set-key (kbd "C-M-,") #'(lambda() (interactive) (scroll-right 10)))
+(global-set-key (kbd "C-M-.") #'(lambda() (interactive) (scroll-left 10)))
 (global-set-key (kbd "C-b") 'counsel-projectile-switch-to-buffer)
 (global-set-key (kbd "C-f") 'counsel-projectile-find-file)
 (global-set-key (kbd "C-p") 'counsel-projectile-switch-project)
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
+(global-set-key (kbd "M-<down>") 'drag-stuff-down)
+(global-set-key (kbd "M-<up>") 'drag-stuff-up)
 
 ;;; helper functions
 

@@ -83,4 +83,7 @@
 (use-package ag
   :ensure t)
 
+(use-package drag-stuff
+  :ensure t)
+
 ;;; packages.el ends here
