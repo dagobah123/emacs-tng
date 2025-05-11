@@ -25,6 +25,7 @@
 (define-key my-prefix-map-search (kbd "e") #'my-grep-in-project-exact)
 (define-key my-prefix-map-search (kbd "g") #'my-grep-in-project-multiple-matches-in-line)
 (define-key my-prefix-map-search (kbd "o") #'occur)
+(define-key my-prefix-map-search (kbd "s") #'swiper-all)
 
 ;;; Editor keymap
 (defvar my-prefix-map-editor (make-sparse-keymap) "Editor keymap")
@@ -57,6 +58,13 @@
 (define-key my-prefix-map-org (kbd "a") #'org-agenda)
 (define-key my-prefix-map-org (kbd "c") #'org-capture)
 
+;;; Window keymap
+(defvar my-prefix-map-window (make-sparse-keymap) "Window keymap")
+(define-key my-prefix-map-window (kbd "1") 'enlarge-window)
+(define-key my-prefix-map-window (kbd "2") 'shrink-window)
+(define-key my-prefix-map-window (kbd "3") 'enlarge-window-horizontally)
+(define-key my-prefix-map-window (kbd "4") 'shrink-window-horizontally)
+
 ;;; Main keymap
 (defvar my-prefix-map (make-sparse-keymap) "Main keymap")
 (define-key my-prefix-map (kbd "C-l") #'er/expand-region)
@@ -69,20 +77,22 @@
 (define-key my-prefix-map (kbd "r") my-prefix-map-rings)
 (define-key my-prefix-map (kbd "s") my-prefix-map-search)
 (define-key my-prefix-map (kbd "t") my-prefix-map-theme)
+(define-key my-prefix-map (kbd "w") my-prefix-map-window)
 
 ;; Bind main keymap to "C-l"
 (global-set-key (kbd "C-l") my-prefix-map)
 
+(global-set-key (kbd "<M-down>") 'drag-stuff-down)
+(global-set-key (kbd "<M-up>") 'drag-stuff-up)
 (global-set-key (kbd "C-,") 'avy-goto-char-2)
 (global-set-key (kbd "C-<") 'dabbrev-completion)
 (global-set-key (kbd "C-M-,") #'(lambda() (interactive) (scroll-right 10)))
 (global-set-key (kbd "C-M-.") #'(lambda() (interactive) (scroll-left 10)))
 (global-set-key (kbd "C-b") 'counsel-projectile-switch-to-buffer)
 (global-set-key (kbd "C-f") 'counsel-projectile-find-file)
+(global-set-key (kbd "C-i") 'ivy-dispatching-call)
 (global-set-key (kbd "C-p") 'counsel-projectile-switch-project)
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
-(global-set-key (kbd "M-<down>") 'drag-stuff-down)
-(global-set-key (kbd "M-<up>") 'drag-stuff-up)
 
 ;;; helper functions
 

@@ -1,59 +1,41 @@
 ;;; chiaroscuro-theme.el --- Theme consisting of multiple themes
 ;;; Commentary:
 ;;; Code:
+
 (load-file "~/.emacs.d/theme/common/variables.el")
 (load-file "~/.emacs.d/theme/common/default.el")
 
 ;;; load light or dark diff colors
 (if (>= INDEX-CHIAROSCURO INDEX-HIGH-CONTRAST)
-    (progn (load-file "~/.emacs.d/theme/common/diff-middle.el"))
-  (progn (load-file "~/.emacs.d/theme/common/diff-light.el")))
+    (load-file "~/.emacs.d/theme/common/diff-middle.el")
+  (load-file "~/.emacs.d/theme/common/diff-light.el"))
 
 ;;; dark themes start here
 (if (>= INDEX-CHIAROSCURO INDEX-LOW-CHROMA)
     (load-file "~/.emacs.d/theme/common/dark.el")
   (load-file "~/.emacs.d/theme/common/light.el"))
 
-(if (> INDEX-CHIAROSCURO INDEX-DEFAULT)
-   (progn
-     (if (eq INDEX-CHIAROSCURO INDEX-ECLIPSE)
-     (load-file "~/.emacs.d/theme/light/eclipse.el"))
-     (if (eq INDEX-CHIAROSCURO INDEX-CONSOLE-LIGHT)
-     (load-file "~/.emacs.d/theme/light/console-light.el"))
-     (if (eq INDEX-CHIAROSCURO INDEX-COLOR-CHANGE-LIGHT)
-     (load-file "~/.emacs.d/theme/color-changer/color-changer.el"))
-     (if (eq INDEX-CHIAROSCURO INDEX-HIGH-CONTRAST)
-     (load-file "~/.emacs.d/theme/light/high-contrast.el"))
-     (if (eq INDEX-CHIAROSCURO INDEX-GRAY)
-     (load-file "~/.emacs.d/theme/light/gray.el"))
-     (if (eq INDEX-CHIAROSCURO INDEX-LOW-CHROMA)
-     (load-file "~/.emacs.d/theme/dark/low-chroma.el"))
-     (if (eq INDEX-CHIAROSCURO INDEX-BLUE)
-     (load-file "~/.emacs.d/theme/dark/blue.el"))
-     (if (eq INDEX-CHIAROSCURO INDEX-NEON)
-     (load-file "~/.emacs.d/theme/dark/neon.el"))
-     (if (eq INDEX-CHIAROSCURO INDEX-CONSOLE-DARK)
-     (load-file "~/.emacs.d/theme/dark/console-dark.el"))
-     (if (eq INDEX-CHIAROSCURO INDEX-RED)
-     (load-file "~/.emacs.d/theme/dark/red.el"))
-     (if (eq INDEX-CHIAROSCURO INDEX-CASABLANCA)
-     (load-file "~/.emacs.d/theme/dark/casablanca.el"))
-     (if (eq INDEX-CHIAROSCURO INDEX-COLOR-CHANGE-DARK)
-     (load-file "~/.emacs.d/theme/color-changer/color-changer.el"))
+(setq theme-map
+      `((,INDEX-ECLIPSE . "~/.emacs.d/theme/light/eclipse.el")
+        (,INDEX-CONSOLE-LIGHT . "~/.emacs.d/theme/light/console-light.el")
+        (,INDEX-COLOR-CHANGE-LIGHT . "~/.emacs.d/theme/color-changer/color-changer.el")
+        (,INDEX-HIGH-CONTRAST . "~/.emacs.d/theme/light/high-contrast.el")
+        (,INDEX-GRAY . "~/.emacs.d/theme/light/gray.el")
+        (,INDEX-LOW-CHROMA . "~/.emacs.d/theme/dark/low-chroma.el")
+        (,INDEX-BLUE . "~/.emacs.d/theme/dark/blue.el")
+        (,INDEX-NEON . "~/.emacs.d/theme/dark/neon.el")
+        (,INDEX-CONSOLE-DARK . "~/.emacs.d/theme/dark/console-dark.el")
+        (,INDEX-RED . "~/.emacs.d/theme/dark/red.el")
+        (,INDEX-CASABLANCA . "~/.emacs.d/theme/dark/casablanca.el")
+        (,INDEX-COLOR-CHANGE-DARK . "~/.emacs.d/theme/color-changer/color-changer.el")))
 
-     ;; reset index
-     (if (> INDEX-CHIAROSCURO number-of-themes) (setq INDEX-CHIAROSCURO 0))
-     (if (< INDEX-CHIAROSCURO 0) (setq INDEX-CHIAROSCURO number-of-themes))
-     ))
+(let ((theme-file (assoc-default INDEX-CHIAROSCURO theme-map)))
+  (when (and theme-file (> INDEX-CHIAROSCURO INDEX-DEFAULT))
+    (load-file theme-file)))
 
 (deftheme chiaroscuro)
 
 (custom-theme-set-faces 'chiaroscuro
-
-(if (eq INDEX-CHIAROSCURO INDEX-HIGH-CONTRAST)
-    (progn
-      `(default ((t (:foreground ,text-normal :background ,background :bold t )))))
-  (progn `(default ((t (:foreground ,text-normal :background ,background :bold nil ))))))
 
 `(ac-candidate-face ((t (:foreground ,text-normal :background ,background-fringe ))))
 `(ac-candidate-mouse-face ((t (:foreground ,text-normal :background ,background-fringe ))))
@@ -75,6 +57,7 @@
 `(cua-rectangle ((t (:foreground ,text-highlight-1 :background ,background-region :bold t ))))
 `(cursor ((t (:background ,background-cursor ))))
 `(custom-button ((t (:foreground ,text-highlight-1 :background ,background-mode-line ))))
+`(default ((t (:foreground ,text-normal :background ,background ))))
 `(diff-file-header ((t (:foreground ,text-highlight-1 :background ,background-magit :bold t ))))
 `(diff-header ((t (:foreground ,text-highlight-1 :background ,background-magit ))))
 `(dired-directory ((t (:foreground ,text-highlight-3 :background unspecified :bold t ))))
@@ -234,9 +217,9 @@
 `(lsp-face-highlight-read ((t (:foreground ,text-highlight-1 :background unspecified ))))
 `(lsp-face-highlight-write ((t (:foreground ,text-highlight-1 :background unspecified ))))
 `(lsp-flycheck-warning-unnecessary-face ((t (:foreground ,text-warning :bold t :underline t ))))
-`(magit-blame-heading ((t (:foreground ,text-normal :background ,background-fringe ))))
-`(magit-blame-highlight ((t (:foreground ,text-normal :background ,background-fringe ))))
-`(magit-blame-margin ((t (:foreground ,text-normal :background ,background-fringe ))))
+`(magit-blame-heading ((t (:foreground ,text-lower :background ,background-fringe ))))
+`(magit-blame-highlight ((t (:foreground ,text-lower :background ,background-fringe ))))
+`(magit-blame-margin ((t (:foreground ,text-lower :background ,background-fringe ))))
 `(magit-branch-current ((t (:foreground ,text-highlight-1 :background unspecified :bold t :box (:line-width 1 :color ,text-highlight-1) ))))
 `(magit-branch-local ((t (:foreground ,text-highlight-1 :background unspecified :bold t :box (:line-width 1 :color ,text-highlight-1) ))))
 `(magit-branch-remote ((t (:foreground ,text-highlight-3 :background unspecified :bold t :box (:line-width 1 :color ,text-highlight-3) ))))

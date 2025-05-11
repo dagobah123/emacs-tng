@@ -26,5 +26,6 @@
 (show-paren-mode t) ;;; Show matching parentheses.
 (tool-bar-mode 0) ;;; Disable tool bar.
 (winner-mode t) ;;; Enable winner mode.
+(setenv "LC_TIME" "en_US.UTF-8") ;;;  Set environment to English
 
 ;;; settings.el ends here
