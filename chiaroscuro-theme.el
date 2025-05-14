@@ -42,6 +42,7 @@
 `(ac-completion-face ((t (:foreground ,text-highlight-1 :background ,background-fringe :bold t ))))
 `(ac-selection-face ((t (:foreground ,text-highlight-1 :background ,background-fringe :bold t ))))
 `(ansi-color-bold ((t (:foreground ,text-highlight-1 :background unspecified :bold t ))))
+`(auto-dim-other-buffers ((t (:foreground ,text-lower :background unspecified ))))
 `(bm-fringe-face ((t (:foreground ,text-highlight-1 :background unspecified ))))
 `(bm-fringe-persistent-face ((t (:foreground ,text-highlight-1 :background unspecified ))))
 `(bookmark-face ((t (:foreground ,text-normal :background unspecified ))))

@@ -10,6 +10,7 @@
 (global-hl-line-mode t) ;;; Enable global hl line.
 (menu-bar-mode 0) ;;; Disable menu bar.
 (scroll-bar-mode 0) ;;; Disable scroll bar.
+(setenv "LC_TIME" "en_US.UTF-8") ;;;  Set environment to English
 (setq ag-arguments '("--java")) ;;; Set additional ag arguments.
 (setq blink-cursor-blinks 0) ;;; Make cursor blink forever.
 (setq confirm-kill-emacs 'y-or-n-p) ;;; Ask if Emacs should be closed.
@@ -26,6 +27,5 @@
 (show-paren-mode t) ;;; Show matching parentheses.
 (tool-bar-mode 0) ;;; Disable tool bar.
 (winner-mode t) ;;; Enable winner mode.
-(setenv "LC_TIME" "en_US.UTF-8") ;;;  Set environment to English
 
 ;;; settings.el ends here
