@@ -93,4 +93,11 @@
   (when (fboundp 'auto-dim-other-buffers-mode)
     (auto-dim-other-buffers-mode t))))
 
+(use-package golden-ratio
+  :ensure t)
+
+(use-package goto-last-change
+  :ensure t)
+
+
 ;;; packages.el ends here

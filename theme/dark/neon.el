@@ -6,7 +6,7 @@
 
 (setq background "#000000")
 (setq background-low "#271b27")
-(setq text-comment "#bb4f80")
+(setq text-comment "#ffa143")
 (setq text-constant "#ffa143")
 (setq text-function "#82ce8a")
 (setq text-highlight-1 "#45cf54")

@@ -8,6 +8,7 @@
 (display-time) ;;; Display time in mode-line.
 (fset 'yes-or-no-p 'y-or-n-p) ;;; Use y and n instead of yes and no.
 (global-hl-line-mode t) ;;; Enable global hl line.
+(golden-ratio-mode 1)
 (menu-bar-mode 0) ;;; Disable menu bar.
 (scroll-bar-mode 0) ;;; Disable scroll bar.
 (setenv "LC_TIME" "en_US.UTF-8") ;;;  Set environment to English

@@ -72,4 +72,16 @@
   (magit-log-current nil nil)
   (delete-other-windows))
 
+(defun my-scroll-down-center ()
+  "Scroll down."
+  (interactive)
+  (next-line 1)
+  (recenter))
+
+(defun my-scroll-up-center ()
+  "Scroll up."
+  (interactive)
+  (previous-line 1)
+  (recenter))
+
 ;;; functions.el ends here
