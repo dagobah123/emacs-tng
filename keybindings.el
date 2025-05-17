@@ -78,6 +78,8 @@
 ;;;(global-set-key (kbd "<C-M-down>") 'drag-stuff-down)
 ;;;(global-set-key (kbd "<C-M-up>") 'drag-stuff-up)
 (global-set-key (kbd "<C-down>") 'my-scroll-down-center)
+(global-set-key (kbd "<C-next>") 'projectile-next-project-buffer)
+(global-set-key (kbd "<C-prior>") 'projectile-previous-project-buffer)
 (global-set-key (kbd "<C-up>") 'my-scroll-up-center)
 (global-set-key (kbd "<M-down>") 'windmove-down)
 (global-set-key (kbd "<M-left>") 'windmove-left)
@@ -92,8 +94,9 @@
 (global-set-key (kbd "C-i") 'ivy-dispatching-call)
 (global-set-key (kbd "C-p") 'counsel-projectile-switch-project)
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
-;;; helper functions
 
+
+;;; helper functions
 (defun default ()
   (interactive)
   (my-set-theme INDEX-DEFAULT))
