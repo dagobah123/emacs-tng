@@ -13,7 +13,7 @@
       '(("t" "Tasks" entry (file+headline "~/source/org-mode/agenda/tasks.org" "Tasks") "* TODO %?")
 	("r" "Remember" entry (file+headline "~/source/org-mode/agenda/remember.org" "Remember") "* TODO %?")))
 
-(setq org-agenda-files (list "~/source/org-mode/agenda"))
+(setq org-agenda-files (list "~/source/org-mode/agenda" "~/source/emacs-tng"))
 
 (setq org-tags-column 0)
 

@@ -45,8 +45,8 @@
 
 ;;; Projectile keymap
 (defvar my-prefix-map-projectile (make-sparse-keymap) "Projectile keymap")
-(define-key my-prefix-map-projectile (kbd "f") #'counsel-projectile-find-file)
-(define-key my-prefix-map-projectile (kbd "p") #'counsel-projectile-switch-project)
+(define-key my-prefix-map-projectile (kbd "i") #'projectile-ibuffer)
+(define-key my-prefix-map-projectile (kbd "s") #'my-project-status)
 
 ;;; Rings keymap
 (defvar my-prefix-map-rings (make-sparse-keymap) "Rings keymap")
@@ -75,8 +75,6 @@
 ;; Bind main keymap to "C-l"
 (global-set-key (kbd "C-l") my-prefix-map)
 
-;;;(global-set-key (kbd "<C-M-down>") 'drag-stuff-down)
-;;;(global-set-key (kbd "<C-M-up>") 'drag-stuff-up)
 (global-set-key (kbd "<C-down>") 'my-scroll-down-center)
 (global-set-key (kbd "<C-next>") 'projectile-next-project-buffer)
 (global-set-key (kbd "<C-prior>") 'projectile-previous-project-buffer)
@@ -94,7 +92,8 @@
 (global-set-key (kbd "C-i") 'ivy-dispatching-call)
 (global-set-key (kbd "C-p") 'counsel-projectile-switch-project)
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
-
+(global-set-key (kbd "M-a") 'drag-stuff-up)
+(global-set-key (kbd "M-z") 'drag-stuff-down)
 
 ;;; helper functions
 (defun default ()

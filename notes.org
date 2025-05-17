@@ -1,0 +1,4 @@
+* Tasks
+** TODO test
+   [2025-05-17 Sa]
+   [[file:~/source/emacs-tng/notes.org::*Tasks][Tasks]]

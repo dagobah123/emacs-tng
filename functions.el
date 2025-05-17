@@ -76,12 +76,22 @@
   "Scroll down."
   (interactive)
   (next-line 1)
+  (back-to-indentation)
   (recenter))
 
 (defun my-scroll-up-center ()
   "Scroll up."
   (interactive)
   (previous-line 1)
+  (back-to-indentation)
   (recenter))
+
+(defun my-project-status ()
+  "Project status."
+  (interactive)
+  (counsel-projectile-org-agenda nil "t")
+  (delete-other-windows)
+  (split-window-vertically)
+  (magit-status))
 
 ;;; functions.el ends here
