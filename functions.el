@@ -5,26 +5,26 @@
 ;;; Code:
 
 (defun my-grep-in-project-at-least-one-match-in-line (search-strings)
-  "Search for the exact case insensitive match using vc-git-grep and display simplified output."
-  (interactive "MEnter search strings (space-separated): ")
-  (my-grep-in-project2 search-strings "git --no-pager grep -n -E --break -e %s" " -e "))
+  "Search space-separated, case insensitive, at least one match per line."
+  (interactive "MSearch: (space-separated, case insensitive, at least one match per line, use \\ to escape): ")
+  (my-grep-in-project2 search-strings "git --no-pager grep -n -E -i --break -e %s" " -e "))
 
 (defun my-grep-in-project-multiple-matches-in-line (search-strings)
-  "Search for multiple strings using vc-git-grep and display simplified output."
-  (interactive "MEnter search strings (space-separated): ")
-  (my-grep-in-project2 search-strings "git --no-pager grep -n -E --all-match -e %s" " --and -e "))
+  "Search space-separated, case insensitive, all matches per line."
+  (interactive "MSearch: (space-separated, case insensitive, all matches per line, use \\ to escape): ")
+  (my-grep-in-project2 search-strings "git --no-pager grep -n -E -i --all-match -e %s" " --and -e "))
 
 (defun my-grep-in-project-exact (search-string)
-  "Search for the exact case insensitive match using vc-git-grep and display simplified output."
-  (interactive "sExact search string: ")
+  "Search case insensitive, exact match, string can contain spaces."
+  (interactive "sSearch: (case insensitive, exact match, string can contain spaces, use \\ to escape) ")
   (let* ((quoted (shell-quote-argument (format "%s" search-string)))
-         (grep-command (concat "git --no-pager grep -n -E --break "
+         (grep-command (concat "git --no-pager grep -n -E -i --break "
                              quoted " "
                              (projectile-project-root))))
     (compilation-start grep-command 'grep-mode)))
 
 (defun my-grep-in-project2 (search-strings grep-string grep-concat)
-  "Search for multiple strings using vc-git-grep and display simplified output."
+  "Basic git grep search."
   (let* ((search-list (split-string search-strings " " t " "))
          (default-directory (projectile-project-root default-directory))
          (grep-command (format grep-string

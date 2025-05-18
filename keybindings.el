@@ -21,9 +21,9 @@
 ;;; Search keymap
 (defvar my-prefix-map-search (make-sparse-keymap) "Search keymap")
 (define-key my-prefix-map-search (kbd "1") #'my-grep-in-project-at-least-one-match-in-line)
+(define-key my-prefix-map-search (kbd "2") #'my-grep-in-project-multiple-matches-in-line)
+(define-key my-prefix-map-search (kbd "3") #'my-grep-in-project-exact)
 (define-key my-prefix-map-search (kbd "a") #'ag)
-(define-key my-prefix-map-search (kbd "e") #'my-grep-in-project-exact)
-(define-key my-prefix-map-search (kbd "g") #'my-grep-in-project-multiple-matches-in-line)
 (define-key my-prefix-map-search (kbd "o") #'occur)
 (define-key my-prefix-map-search (kbd "s") #'swiper-all)
 
