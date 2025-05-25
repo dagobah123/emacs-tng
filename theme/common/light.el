@@ -1,10 +1,11 @@
-;;; light --- common colors
+4;;; light --- common colors
 ;;; Commentary:
 ;;; Code:
 
 (load-file "~/.emacs.d/theme/common/variables.el")
 
 (setq background-cursor "#000000")
+(setq background-directory "#ffddff")
 (setq background-fringe "#eeeeee")
 (setq background-hl "#fff5a9")
 (setq background-magit "#eeeeee")
@@ -12,6 +13,7 @@
 (setq background-mode-line "#cccccc")
 (setq background-mode-line-inactive "#eeeeee")
 (setq background-region "#bbffbb")
+(setq text-directory "#a63c73")
 (setq text-hl "#000000")
 (setq text-mode-line "#000000")
 (setq text-mode-line-inactive "#999999")

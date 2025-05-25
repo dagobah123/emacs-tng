@@ -99,5 +99,12 @@
 (use-package goto-last-change
   :ensure t)
 
+(use-package counsel-fd
+  :ensure t)
+
+(use-package diredfl
+  :ensure t
+  :config
+  (diredfl-global-mode 1))
 
 ;;; packages.el ends here
