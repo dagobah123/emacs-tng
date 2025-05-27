@@ -79,7 +79,7 @@
 `(diredfl-date-time  ((t (:foreground ,text-low :background unspecified ))))
 ;;;`(diredfl-deletion  ((t (:foreground ,text-normal :background unspecified ))))
 `(diredfl-deletion-file-name  ((t (:foreground ,background-diff-removed-highlight :background ,text-diff-removed-highlight ))))
-`(diredfl-dir-heading  ((t (:foreground ,text-directory :background ,background-directory :bold t ))))
+`(diredfl-dir-heading  ((t (:foreground ,text-highlight-3 :background unspecified :bold t ))))
 `(diredfl-dir-name  ((t (:foreground ,text-directory :background ,background-directory :bold t ))))
 `(diredfl-dir-priv  ((t (:foreground ,text-normal :background unspecified ))))
 `(diredfl-exec-priv  ((t (:foreground ,text-normal :background unspecified ))))

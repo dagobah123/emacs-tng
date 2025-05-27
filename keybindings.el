@@ -45,8 +45,11 @@
 
 ;;; Projectile keymap
 (defvar my-prefix-map-projectile (make-sparse-keymap) "Projectile keymap")
+(define-key my-prefix-map-projectile (kbd "c") #'counsel-projectile-org-capture)
+(define-key my-prefix-map-projectile (kbd "d") #'ivy-dispatching-done)
 (define-key my-prefix-map-projectile (kbd "i") #'projectile-ibuffer)
 (define-key my-prefix-map-projectile (kbd "s") #'my-project-status)
+(define-key my-prefix-map-projectile (kbd "t") #'counsel-projectile-org-agenda)
 
 ;;; Rings keymap
 (defvar my-prefix-map-rings (make-sparse-keymap) "Rings keymap")
@@ -91,7 +94,9 @@
 (global-set-key (kbd "C-f") 'counsel-projectile-find-file)
 (global-set-key (kbd "C-i") 'ivy-dispatching-call)
 (global-set-key (kbd "C-p") 'counsel-projectile-switch-project)
-(global-set-key (kbd "C-x C-b") 'switch-to-buffer)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "M-H") 'sort-lines)
 (global-set-key (kbd "M-a") 'drag-stuff-up)
 (global-set-key (kbd "M-z") 'drag-stuff-down)
 
