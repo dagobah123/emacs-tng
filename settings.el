@@ -10,6 +10,7 @@
 (global-hl-line-mode t) ;;; Enable global hl line.
 (golden-ratio-mode 1)
 (menu-bar-mode 0) ;;; Disable menu bar.
+(olivetti-set-width 100)
 (scroll-bar-mode 0) ;;; Disable scroll bar.
 (setenv "LC_TIME" "en_US.UTF-8") ;;;  Set environment to English
 (setq ag-arguments '("--java")) ;;; Set additional ag arguments.
