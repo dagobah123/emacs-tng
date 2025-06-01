@@ -4,7 +4,7 @@
 
 (load-file "~/.emacs.d/theme/common/variables.el")
 
-(setq background-match-1 "#ff0000")
+(setq background-match-1 "#ffb223")
 (setq background-match-2 "#fff735")
 (setq background-match-3 "#0000ff")
 (setq text-hl "#000000")

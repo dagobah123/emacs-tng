@@ -23,7 +23,7 @@
 (setq text-link "#9d9d9d")
 (setq text-low "#666666")
 (setq text-lower "#444444")
-(setq text-mode-line "#bbbbbb")
+;;;(setq text-mode-line "#bbbbbb")
 (setq text-mode-line-inactive "#444444")
 (setq text-normal "#888888")
 (setq text-preprocessor "#696969")

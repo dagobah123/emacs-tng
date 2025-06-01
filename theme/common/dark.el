@@ -12,14 +12,14 @@
 (setq background-magit-branch-local "#007700")
 (setq background-magit-branch-remote "#770000")
 (setq background-magit-dark "#222222")
-(setq background-mode-line "#333300")
+(setq background-mode-line "#003300")
 (setq background-mode-line-inactive "#151515")
-(setq background-region "#aaaa00")
+(setq background-region "#962f1b")
 (setq text-directory "#bf6bbf")
 (setq text-hl "#ffff00")
-(setq text-mode-line "#cccc00")
+(setq text-mode-line "#00cc00")
 (setq text-mode-line-inactive "#444444")
-(setq text-region "#ffff00")
+(setq text-region "#ff7d63")
 (setq text-whitespace "#333333")
 
 ;;; dark.el ends here
