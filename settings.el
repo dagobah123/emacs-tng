@@ -8,11 +8,11 @@
 (display-time) ;;; Display time in mode-line.
 (fset 'yes-or-no-p 'y-or-n-p) ;;; Use y and n instead of yes and no.
 (global-hl-line-mode t) ;;; Enable global hl line.
-(golden-ratio-mode 1)
+(golden-ratio-mode 1) ;;; Enable golden ratio mode.
 (menu-bar-mode 0) ;;; Disable menu bar.
-(olivetti-set-width 100)
+(olivetti-set-width 150) ;;; Set olivetti width.
 (scroll-bar-mode 0) ;;; Disable scroll bar.
-(setenv "LC_TIME" "en_US.UTF-8") ;;;  Set environment to English
+(setenv "LC_TIME" "en_US.UTF-8") ;;; Set environment to English.
 (setq ag-arguments '("--java")) ;;; Set additional ag arguments.
 (setq blink-cursor-blinks 0) ;;; Make cursor blink forever.
 (setq confirm-kill-emacs 'y-or-n-p) ;;; Ask if Emacs should be closed.
@@ -21,8 +21,8 @@
 (setq ivy-read-action-function 'ivy-hydra-read-action) ;;; Ivy hydra.
 (setq make-backup-files nil) ;;; Do not create backup files.
 (setq package-check-signature nil) ;;; Disable package signature check.
-(setq projectile-globally-ignored-directories '(".target" "target")) ;;; Globally ignored directories
-(setq projectile-globally-ignored-files '("*.~undo-tree~")) ;;; Globally ignored files
+(setq projectile-globally-ignored-directories '(".target" "target")) ;;; Globally ignored directories.
+(setq projectile-globally-ignored-files '("*.~undo-tree~")) ;;; Globally ignored files.
 (setq ring-bell-function 'ignore) ;;; Turn bell off.
 (setq-default indent-tabs-mode nil) ;;; Use spaces.
 (setq-default tab-width 4) ;;; Set tab width to 4 spaces.
