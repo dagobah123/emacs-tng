@@ -99,10 +99,10 @@
   (interactive)
   (let ((buffers (mapcar #'buffer-name (buffer-list))))
     ;; Exclude buffers starting with '*'
-    (setq buffers (seq-filter (lambda (buf) (not (string-prefix-p " *" buf))) buffers))
-    (setq buffers (seq-filter (lambda (buf) (not (string-prefix-p "*" buf))) buffers))
+    ;;;(setq buffers (seq-filter (lambda (buf) (not (string-prefix-p " *" buf))) buffers))
+    ;;;(setq buffers (seq-filter (lambda (buf) (not (string-prefix-p "*" buf))) buffers))
     ;; Sort the remaining buffers alphabetically
-    (setq buffers (sort buffers #'string<))
+    ;;;(setq buffers (sort buffers #'string<))
     (let ((chosen-buffer (completing-read "Select buffer: " buffers)))
       (when chosen-buffer
         (switch-to-buffer chosen-buffer)))))
