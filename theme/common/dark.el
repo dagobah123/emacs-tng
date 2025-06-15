@@ -17,6 +17,7 @@
 (setq background-mode-line "#003300")
 (setq background-mode-line-inactive "#333333")
 (setq background-region "#962f1b")
+(setq text-delete "#992222")
 (setq text-directory "#bf6bbf")
 (setq text-hl "#ffff00")
 (setq text-match-1 "#9e44ca")

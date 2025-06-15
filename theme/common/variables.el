@@ -79,6 +79,7 @@
 (defvar text-comment nil ".")
 (defvar text-constant nil ".")
 (defvar text-cursor nil ".")
+(defvar text-delete nil ".")
 (defvar text-diff nil ".")
 (defvar text-diff-added nil ".")
 (defvar text-diff-added-highlight nil ".")

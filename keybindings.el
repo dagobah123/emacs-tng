@@ -98,7 +98,7 @@
 (global-set-key (kbd "C-i") 'ivy-dispatching-call)
 (global-set-key (kbd "C-p") 'counsel-projectile-switch-project)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
-(global-set-key (kbd "C-b") 'my-buffers-list)
+(global-set-key (kbd "C-b") 'projectile-switch-to-buffer)
 (global-set-key (kbd "M-H") 'sort-lines)
 (global-set-key (kbd "M-a") 'drag-stuff-up)
 (global-set-key (kbd "M-b") 'counsel-projectile-find-file)
