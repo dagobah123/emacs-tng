@@ -86,13 +86,6 @@
 (use-package drag-stuff
   :ensure t)
 
-(use-package auto-dim-other-buffers
-  :ensure t)
-
-(add-hook 'after-init-hook (lambda ()
-  (when (fboundp 'auto-dim-other-buffers-mode)
-    (auto-dim-other-buffers-mode t))))
-
 (use-package golden-ratio
   :ensure t)
 

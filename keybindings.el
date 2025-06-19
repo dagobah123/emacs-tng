@@ -32,7 +32,10 @@
 (defvar my-prefix-map-editor (make-sparse-keymap) "Editor keymap")
 (define-key my-prefix-map-editor (kbd "<left>") #'scroll-right)
 (define-key my-prefix-map-editor (kbd "<right>") #'scroll-left)
+(define-key my-prefix-map-editor (kbd "C") #'my-goto-class)
+(define-key my-prefix-map-editor (kbd "D") #'my-copy-line-at-point)
 (define-key my-prefix-map-editor (kbd "L") #'my-magit-log)
+(define-key my-prefix-map-editor (kbd "M") #'my-goto-member)
 (define-key my-prefix-map-editor (kbd "b") #'magit-log-buffer-file)
 (define-key my-prefix-map-editor (kbd "c") #'my-class-overview)
 (define-key my-prefix-map-editor (kbd "d") #'my-duplicate-line)
@@ -43,6 +46,7 @@
 (define-key my-prefix-map-editor (kbd "m") #'my-magit)
 (define-key my-prefix-map-editor (kbd "n") #'my-new-line)
 (define-key my-prefix-map-editor (kbd "o") #'olivetti-mode)
+(define-key my-prefix-map-editor (kbd "t") #'my-find-file-at-point-in-project)
 (define-key my-prefix-map-editor (kbd "w") #'whitespace-mode)
 
 ;;; Projectile keymap

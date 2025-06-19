@@ -8,7 +8,7 @@
 (display-time) ;;; Display time in mode-line.
 (fset 'yes-or-no-p 'y-or-n-p) ;;; Use y and n instead of yes and no.
 (global-hl-line-mode t) ;;; Enable global hl line.
-(golden-ratio-mode 1) ;;; Enable golden ratio mode.
+;;;(golden-ratio-mode 1) ;;; Enable golden ratio mode.
 (menu-bar-mode 0) ;;; Disable menu bar.
 (olivetti-set-width 150) ;;; Set olivetti width.
 (scroll-bar-mode 0) ;;; Disable scroll bar.

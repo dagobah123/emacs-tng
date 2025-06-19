@@ -107,4 +107,65 @@
       (when chosen-buffer
         (switch-to-buffer chosen-buffer)))))
 
+(defun my-copy-line-at-point ()
+  "Copy line at point."
+  (interactive)
+  (save-excursion
+    (let ((begin (line-beginning-position))
+          (end (line-end-position)))
+      (copy-region-as-kill begin end)))
+  (message "Copied line."))
+
+(defun my-get-filename ()
+  "Get file name."
+  (interactive)
+  (dired-jump)
+  (dired-copy-filename-as-kill)
+  (kill-this-buffer))
+
+(defvar regexp-class ".*class.*")
+(defvar regexp-member "public.*;\\|protected.*;\\|private.*;")
+
+(defun my-goto-class ()
+  "Go to class."
+  (interactive)
+  (beginning-of-buffer)
+  (re-search-forward regexp-class nil t)
+  (evil-first-non-blank))
+
+(defun my-goto-member ()
+  "Go to member."
+  (interactive)
+  (beginning-of-buffer)
+  (re-search-forward regexp-member nil t)
+  (evil-first-non-blank))
+
+(defun my-find-file-at-point-in-project ()
+  "Find file at point in project."
+  (interactive)
+  (subword-mode 0)
+  (save-excursion
+    (let ((end (progn (right-word) (point)))
+          (beg (progn (backward-word) (point))))
+      (copy-region-as-kill beg end)
+
+      (find-file (my-find-file-recursively (projectile-project-root) (concat (current-kill 0) ".java")))))
+  (subword-mode t))
+
+(defun my-find-file-recursively (directory filename)
+  "Recursively search for FILENAME in DIRECTORY and its subdirectories, ignoring hidden files and directories."
+  (let ((files (directory-files directory t))
+        (result nil))
+    (dolist (file files)
+      (let ((file-name (file-name-nondirectory file)))
+        (unless (string-prefix-p "." file-name)  ; Ignore hidden files/dirs
+          (if (file-directory-p file)
+              (when (not (member file-name '("." "..")))
+                (setq found (my-find-file-recursively file filename))
+                (when found
+                  (setq result found)))
+            (when (string= file-name filename)
+              (setq result file))))))
+    result))
+
 ;;; functions.el ends here
