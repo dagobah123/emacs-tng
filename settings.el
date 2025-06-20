@@ -8,7 +8,6 @@
 (display-time) ;;; Display time in mode-line.
 (fset 'yes-or-no-p 'y-or-n-p) ;;; Use y and n instead of yes and no.
 (global-hl-line-mode t) ;;; Enable global hl line.
-;;;(golden-ratio-mode 1) ;;; Enable golden ratio mode.
 (menu-bar-mode 0) ;;; Disable menu bar.
 (olivetti-set-width 150) ;;; Set olivetti width.
 (scroll-bar-mode 0) ;;; Disable scroll bar.
@@ -24,6 +23,8 @@
 (setq projectile-globally-ignored-directories '(".target" "target")) ;;; Globally ignored directories.
 (setq projectile-globally-ignored-files '("*.~undo-tree~")) ;;; Globally ignored files.
 (setq ring-bell-function 'ignore) ;;; Turn bell off.
+(setq treemacs-icon-fallback-text (propertize "> " 'face 'font-lock-keyword-face)) ;;; Treemacs no icons.
+(setq treemacs-no-png-images t) ;;; Treemacs no icons.
 (setq-default indent-tabs-mode nil) ;;; Use spaces.
 (setq-default tab-width 4) ;;; Set tab width to 4 spaces.
 (setq-default truncate-lines t) ;;; Long lines will not wrap.

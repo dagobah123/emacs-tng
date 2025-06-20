@@ -100,4 +100,13 @@
   :config
   (diredfl-global-mode 1))
 
+(use-package lsp-java
+  :ensure t)
+
+(use-package lsp-ui
+  :ensure t)
+
+(use-package company
+  :ensure t)
+
 ;;; packages.el ends here
