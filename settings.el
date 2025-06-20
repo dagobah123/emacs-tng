@@ -7,6 +7,7 @@
 (abbrev-mode t) ;;; Enable abbrev mode.
 (display-time) ;;; Display time in mode-line.
 (fset 'yes-or-no-p 'y-or-n-p) ;;; Use y and n instead of yes and no.
+(global-company-mode)
 (global-hl-line-mode t) ;;; Enable global hl line.
 (menu-bar-mode 0) ;;; Disable menu bar.
 (olivetti-set-width 150) ;;; Set olivetti width.
