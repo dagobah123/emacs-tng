@@ -1,4 +1,4 @@
-;;; console light --- common console light theme
+;;; console light --- common console light theme  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

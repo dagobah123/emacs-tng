@@ -1,4 +1,4 @@
-;;; keybindings.el --- keybindings file
+;;; keybindings.el --- keybindings file  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Keybindings file
 

@@ -1,4 +1,4 @@
-;;; casablanca --- theme
+;;; casablanca --- theme  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

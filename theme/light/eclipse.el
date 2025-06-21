@@ -1,4 +1,4 @@
-;;; eclipse --- theme
+;;; eclipse --- theme  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

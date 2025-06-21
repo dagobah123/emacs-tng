@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 4;;; light --- common colors
 ;;; Commentary:
 ;;; Code:

@@ -1,4 +1,4 @@
-;;; hydra.el --- hydra file
+;;; hydra.el --- hydra file  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Hydra file
 

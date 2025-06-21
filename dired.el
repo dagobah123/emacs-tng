@@ -1,4 +1,4 @@
-;;; dired.el --- dired file
+;;; dired.el --- dired file  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Dired file
 

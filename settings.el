@@ -1,4 +1,4 @@
-;;; settings.el --- settings file
+;;; settings.el --- settings file  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Settings file
 

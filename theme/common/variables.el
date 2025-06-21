@@ -1,4 +1,4 @@
-;;; variables --- theme
+;;; variables --- theme  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

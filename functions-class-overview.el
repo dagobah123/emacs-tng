@@ -1,4 +1,4 @@
-;;; functions-class-overview.el --- functions-class-overview file
+;;; functions-class-overview.el --- functions-class-overview file  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Custom functions
 

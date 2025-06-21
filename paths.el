@@ -1,4 +1,4 @@
-;;; paths.el --- paths file
+;;; paths.el --- paths file  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Load config files
 

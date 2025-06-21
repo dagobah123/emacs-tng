@@ -1,4 +1,4 @@
-;;; high-contrast --- theme
+;;; high-contrast --- theme  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

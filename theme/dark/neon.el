@@ -1,4 +1,4 @@
-;;; neon --- theme
+;;; neon --- theme  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

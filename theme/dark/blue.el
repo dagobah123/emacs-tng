@@ -1,4 +1,4 @@
-;;; blue --- theme
+;;; blue --- theme  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

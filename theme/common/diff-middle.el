@@ -1,4 +1,4 @@
-;;; middle --- common light theme
+;;; middle --- common light theme  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

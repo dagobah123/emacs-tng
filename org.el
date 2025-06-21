@@ -1,4 +1,4 @@
-;;; org.el --- org file
+;;; org.el --- org file  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; org mode settings
 

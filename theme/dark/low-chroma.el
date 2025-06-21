@@ -1,4 +1,4 @@
-;;; low_chroma --- theme
+;;; low_chroma --- theme  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

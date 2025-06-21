@@ -1,4 +1,4 @@
-;;; package-archives.el --- package archives file
+;;; package-archives.el --- package archives file  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Package-Archives file
 

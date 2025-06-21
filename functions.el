@@ -1,4 +1,4 @@
-;;; functions.el --- functions file
+;;; functions.el --- functions file  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Custom functions
 

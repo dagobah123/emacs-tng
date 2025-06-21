@@ -1,4 +1,4 @@
-;;; color-changer --- theme
+;;; color-changer --- theme  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

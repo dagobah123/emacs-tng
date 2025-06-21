@@ -1,4 +1,4 @@
-;;; theme_default_light --- common light theme
+;;; theme_default_light --- common light theme  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

@@ -1,4 +1,4 @@
-;;; chiaroscuro-theme.el --- Theme consisting of multiple themes
+;;; chiaroscuro-theme.el --- Theme consisting of multiple themes  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -228,12 +228,13 @@
 `(ivy-grep-info ((t (:foreground ,text-highlight-1 :background unspecified ))))
 `(ivy-grep-line-number ((t (:foreground ,text-highlight-1 :background unspecified ))))
 `(ivy-match-required-face ((t (:foreground ,text-highlight-1 :background unspecified ))))
-`(ivy-minibuffer-match-face-1 ((t (:foreground ,text-match-1 :background ,background-match-1 :bold t ))))
-`(ivy-minibuffer-match-face-2 ((t (:foreground ,text-match-1 :background ,background-match-1 :bold t ))))
-`(ivy-minibuffer-match-face-3 ((t (:foreground ,text-match-1 :background ,background-match-1 :bold t ))))
-`(ivy-minibuffer-match-face-4 ((t (:foreground ,text-match-1 :background ,background-match-1 :bold t ))))
+;;;`(ivy-minibuffer-match-face-1 ((t (:foreground ,text-match-1 :background ,background-match-1 :bold t :italic t ))))
+;;;`(ivy-minibuffer-match-face-2 ((t (:foreground ,text-match-2 :background ,background-match-2 :bold t :italic t ))))
+;;;`(ivy-minibuffer-match-face-3 ((t (:foreground ,text-match-1 :background ,background-match-1 :bold t :italic t ))))
+;;;`(ivy-minibuffer-match-face-4 ((t (:foreground ,text-match-1 :background ,background-match-1 :bold t :italic t ))))
 `(ivy-modified-outside-buffer ((t (:foreground ,text-low :background unspecified :bold t :italic t ))))
 `(ivy-org ((t (:foreground ,text-low :background unspecified :italic t ))))
+`(ivy-prompt-match ((t (:foreground ,text-match-1 :background ,background-match-1 :bold t ))))
 `(ivy-subdir ((t (:bold t ))))
 `(ivy-virtual ((t (:foreground ,text-lower ))))
 `(lazy-highlight ((t (:foreground ,text-highlight-1 :background unspecified ))))
@@ -386,6 +387,7 @@
 `(treemacs-git-untracked-face ((t (:foreground ,text-low :background unspecified :bold t ))))
 `(treemacs-root-face ((t (:foreground ,text-highlight-1 :background unspecified :bold t ))))
 `(vertical-border ((t (:foreground ,background ))))
+`(warning ((t (:foreground ,text-mode-line :background unspecified :bold t :underline t ))))
 `(whitespace-indentation ((t (:foreground ,text-whitespace :background unspecified ))))
 `(whitespace-line ((t (:background unspecified ))))
 `(whitespace-newline ((t (:foreground ,text-whitespace :background unspecified ))))

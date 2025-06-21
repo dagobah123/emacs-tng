@@ -1,4 +1,4 @@
-;;; packages.el --- packages file
+;;; packages.el --- packages file  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Packages file
 

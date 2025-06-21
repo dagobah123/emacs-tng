@@ -1,4 +1,4 @@
-;;; theme.el --- theme file
+;;; theme.el --- theme file  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Theme file
 

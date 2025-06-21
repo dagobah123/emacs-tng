@@ -1,4 +1,4 @@
-;;; custom.el --- custom file
+;;; custom.el --- custom file  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Custom file
 

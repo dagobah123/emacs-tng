@@ -1,4 +1,4 @@
-;;; font.el --- font file
+;;; font.el --- font file  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Font file
 
