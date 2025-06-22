@@ -98,14 +98,14 @@
 (global-set-key (kbd "C-M-.") #'(lambda() (interactive) (scroll-left 10)))
 (global-set-key (kbd "C-M-b") 'helm-buffers-list)
 ;;;(global-set-key (kbd "C-b") 'ibuffer-jump)
-(global-set-key (kbd "C-f") 'counsel-projectile-find-file)
+(global-set-key (kbd "C-f") 'projectile-find-file)
 (global-set-key (kbd "C-i") 'ivy-dispatching-call)
-(global-set-key (kbd "C-p") 'counsel-projectile-switch-project)
+(global-set-key (kbd "C-p") 'projectile-switch-project)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-b") 'projectile-switch-to-buffer)
 (global-set-key (kbd "M-H") 'sort-lines)
 (global-set-key (kbd "M-a") 'drag-stuff-up)
-(global-set-key (kbd "M-b") 'counsel-projectile-find-file)
+(global-set-key (kbd "M-b") 'projectile-find-file)
 (global-set-key (kbd "M-z") 'drag-stuff-down)
 
 ;;; helper functions
