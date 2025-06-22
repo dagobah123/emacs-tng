@@ -64,6 +64,7 @@
 `(cua-rectangle ((t (:foreground ,text-region :background ,background-region :bold t ))))
 `(cursor ((t (:background ,background-cursor ))))
 `(custom-button ((t (:foreground ,text-highlight-1 :background ,background-mode-line ))))
+`(dap-ui-marker-face ((t (:foreground ,text-hl :background ,background-hl ))))
 `(default ((t (:foreground ,text-normal :background ,background ))))
 `(diff-file-header ((t (:foreground ,text-highlight-1 :background ,background-magit :bold t ))))
 `(diff-header ((t (:foreground ,text-highlight-1 :background ,background-magit ))))

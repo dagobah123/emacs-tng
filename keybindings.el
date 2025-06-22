@@ -107,6 +107,11 @@
 (global-set-key (kbd "M-a") 'drag-stuff-up)
 (global-set-key (kbd "M-b") 'projectile-find-file)
 (global-set-key (kbd "M-z") 'drag-stuff-down)
+(global-set-key (kbd "<f4>") 'dap-java-debug)
+(global-set-key (kbd "<f5>") 'dap-step-in)
+(global-set-key (kbd "<f6>") 'dap-next)
+(global-set-key (kbd "<f8>") 'dap-continue)
+(global-set-key (kbd "<f9>") 'dap-breakpoint-toggle)
 
 ;;; helper functions
 (defun default ()
