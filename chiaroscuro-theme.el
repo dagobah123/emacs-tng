@@ -206,7 +206,7 @@
 `(helm-non-file-buffer ((t (:foreground ,text-highlight-3 :background unspecified :italic t ))))
 `(helm-selection ((t (:foreground ,text-match-2 :background ,background-match-2 :bold t ))))
 `(helm-selection-line ((t (:foreground ,text-match-2 :background ,background-match-2 :bold t ))))
-`(helm-separator ((t (:foreground ,text-low :background ,background-hl ))))
+`(helm-separator ((t (:foreground ,text-low :background unspecified ))))
 `(helm-source-header ((t (:foreground ,text-highlight-1 :background unspecified :bold t :height 1.3 :family "Sans Serif" ))))
 `(helm-swoop-target-line-block-face ((t (:foreground ,text-match-2 :background ,background-match-2 ))))
 `(helm-swoop-target-line-face ((t (:foreground ,text-match-2 :background ,background-match-2 :bold t ))))
@@ -397,6 +397,11 @@
 `(xref-match ((t (:foreground ,text-highlight-1 :background unspecified :bold t ))))
 `(ztreep-diff-model-add-face ((t (:foreground ,text-highlight-1 :background unspecified ))))
 `(ztreep-diff-model-normal-face ((t (:foreground ,text-normal :background unspecified ))))
+`(nxml-element-local-name ((t (:foreground ,text-highlight-1 :background unspecified ))))
+`(nxml-tag-delimiter ((t (:foreground ,text-highlight-3 :background unspecified ))))
+`(escape-glyph ((t (:foreground ,text-whitespace :background unspecified ))))
+`(lsp-headerline-breadcrumb-separator-face ((t (:foreground ,text-low :background unspecified ))))
+`(dap-ui-breakpoint-verified-fringe ((t (:foreground ,text-highlight-1 :background unspecified ))))
 )
 
 ;;;###autoload

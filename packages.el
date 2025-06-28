@@ -14,12 +14,13 @@
 
 (use-package projectile
   :ensure t
-  :diminish projectile-mode
+  :delight " p"
   :config (projectile-mode) (projectile-load-known-projects))
 
 (use-package which-key
   :ensure t
-  :config (which-key-mode t))
+  :config (which-key-mode t)
+  :delight " wk")
 
 (use-package helm
   :ensure t
@@ -27,78 +28,90 @@
   (helm-mode t)
   (progn (setq helm-buffers-fuzzy-matching t))
   :bind
-  (("M-x" . helm-M-x)))
+  (("M-x" . helm-M-x))
+  :delight " h")
 
 (use-package swiper
   :ensure t
   :bind
-  (("C-s" . swiper)("C-r" . swiper-thing-at-point)))
+  (("C-s" . swiper)("C-r" . swiper-thing-at-point))
+  :delight " s")
 
 (use-package undo-tree
   :ensure t
-  :config (global-undo-tree-mode))
+  :config (global-undo-tree-mode)
+  :delight " ut")
 
 (use-package rainbow-mode
   :ensure t
-  :hook (emacs-lisp-mode text-mode lisp-mode))
+  :hook (emacs-lisp-mode text-mode lisp-mode)
+  :delight " r")
 
 (use-package counsel
   :ensure t
-  :config (counsel-mode))
+  :config (counsel-mode)
+  :delight " co")
 
 (use-package counsel-projectile
   :ensure t
   :after (projectile counsel)
   :config
-  (counsel-projectile-mode))
+  (counsel-projectile-mode)
+  :delight " pc")
 
 (use-package ivy-hydra
-  :ensure t)
-
-(use-package eglot
-  :commands (eglot eglot-ensure)
-  :config
-  ;; Define the command to start JDTLS for Java
-  (add-to-list 'eglot-server-programs
-               `(java-mode . (,ECLIPSE-LS))))
+  :ensure t
+  :delight " ih")
 
 (use-package powershell
-  :ensure t)
+  :ensure t
+  :delight " po")
 
 (use-package expand-region
-  :ensure t)
+  :ensure t
+  :delight " er")
 
 (use-package csharp-mode
-  :ensure t)
+  :ensure t
+  :delight " c#")
 
 (use-package avy
-  :ensure t)
+  :ensure t
+  :delight " av")
 
 (use-package iedit
-  :ensure t)
+  :ensure t
+  :delight " ie")
 
 (use-package olivetti
-  :ensure t)
+  :ensure t
+  :delight " ol")
 
 (use-package ag
-  :ensure t)
+  :ensure t
+  :delight " ag")
 
 (use-package drag-stuff
-  :ensure t)
+  :ensure t
+  :delight " ds")
 
 (use-package golden-ratio
-  :ensure t)
+  :ensure t
+  :delight " gr")
 
 (use-package goto-last-change
-  :ensure t)
+  :ensure t
+  :delight " go")
 
 (use-package counsel-fd
-  :ensure t)
+  :ensure t
+  :delight " cf")
 
 (use-package diredfl
   :ensure t
   :config
-  (diredfl-global-mode 1))
+  (diredfl-global-mode 1)
+  :delight " df")
 
 (use-package lsp-java
   :ensure t)
@@ -107,6 +120,18 @@
   :ensure t)
 
 (use-package company
+  :ensure t
+  :delight " cy")
+
+(use-package yasnippet
+  :ensure t
+  :delight " y")
+
+(use-package java-snippets
+  :ensure t
+  :delight " js")
+
+(use-package delight
   :ensure t)
 
 ;;; packages.el ends here

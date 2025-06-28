@@ -6,6 +6,12 @@
 
 (defvar lsp-java-java-path)
 (setq lsp-java-java-path "/home/computer/software/jdk-21.0.2/bin/java")
+(setenv "JAVA_HOME" "/home/computer/software/jdk-21.0.2")
+
+(use-package lsp-java
+  :ensure t
+  :config
+  (add-hook 'java-mode-hook #'lsp))
 
 (defun my-lsp-off ()
   "Turn off LSP and remove the hook for Java buffers4."

@@ -20,6 +20,7 @@
 (load-file (concat EMACS-HOME "/dired.el"))
 (load-file (concat EMACS-HOME "/hydra.el"))
 (load-file (concat EMACS-HOME "/font.el"))
+(load-file (concat EMACS-HOME "/shell.el"))
 (load-file (concat EMACS-HOME "/custom.el"))
 (load-file (concat EMACS-HOME "/macros.el"))
 (load-file (concat EMACS-HOME "/settings.el"))

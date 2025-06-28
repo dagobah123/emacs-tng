@@ -1,4 +1,4 @@
-;;; casablanca --- theme  -*- lexical-binding: t; -*-
+;; casablanca --- theme  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -9,8 +9,6 @@
 (setq background-diff-added-highlight "#008b45")
 (setq background-diff-removed "#8b3a3a")
 (setq background-diff-removed-highlight "#cd3333")
-(setq background-fringe "#1a1a1a")
-(setq background-mode-line "#0d0d0d")
 (setq text-comment "#555555")
 (setq text-constant "#969696")
 (setq text-function "#c7c7c7")
@@ -23,7 +21,6 @@
 (setq text-link "#9d9d9d")
 (setq text-low "#666666")
 (setq text-lower "#444444")
-;;;(setq text-mode-line "#bbbbbb")
 (setq text-mode-line-inactive "#444444")
 (setq text-normal "#888888")
 (setq text-preprocessor "#696969")
