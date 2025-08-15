@@ -52,6 +52,8 @@
 (define-key my-prefix-map-editor (kbd "s") #'sort-lines)
 (define-key my-prefix-map-editor (kbd "t") #'transpose-lines)
 (define-key my-prefix-map-editor (kbd "w") #'whitespace-mode)
+(define-key my-prefix-map-editor (kbd "<up>") #'drag-stuff-up)
+(define-key my-prefix-map-editor (kbd "<down>") #'drag-stuff-down)
 
 (define-key my-prefix-map-projectile (kbd "a") #'counsel-projectile-org-agenda)
 (define-key my-prefix-map-projectile (kbd "c") #'counsel-projectile-org-capture)
@@ -109,9 +111,6 @@
 (global-set-key (kbd "C-x <up>") 'windmove-up)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "M-H") 'sort-lines)
-(global-set-key (kbd "M-a") 'drag-stuff-up)
-(global-set-key (kbd "M-b") 'projectile-find-file)
-(global-set-key (kbd "M-z") 'drag-stuff-down)
 
 (defun default ()
   (interactive)
