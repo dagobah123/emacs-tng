@@ -34,16 +34,13 @@
 (define-key my-prefix-map-editor (kbd "<right>") #'scroll-left)
 (define-key my-prefix-map-editor (kbd "C") #'my-goto-class)
 (define-key my-prefix-map-editor (kbd "D") #'my-copy-line-at-point)
-(define-key my-prefix-map-editor (kbd "L") #'my-magit-log)
 (define-key my-prefix-map-editor (kbd "M") #'my-goto-member)
-(define-key my-prefix-map-editor (kbd "b") #'magit-log-buffer-file)
 (define-key my-prefix-map-editor (kbd "c") #'my-class-overview)
 (define-key my-prefix-map-editor (kbd "d") #'my-duplicate-line)
 (define-key my-prefix-map-editor (kbd "e") #'iedit)
 (define-key my-prefix-map-editor (kbd "h") #'global-hl-line-mode)
 (define-key my-prefix-map-editor (kbd "i") #'imenu)
 (define-key my-prefix-map-editor (kbd "l") #'display-line-numbers-mode)
-(define-key my-prefix-map-editor (kbd "m") #'my-magit)
 (define-key my-prefix-map-editor (kbd "n") #'my-new-line)
 (define-key my-prefix-map-editor (kbd "o") #'olivetti-mode)
 (define-key my-prefix-map-editor (kbd "t") #'my-find-file-at-point-in-project)
@@ -51,11 +48,12 @@
 
 ;;; Projectile keymap
 (defvar my-prefix-map-projectile (make-sparse-keymap) "Projectile keymap")
+(define-key my-prefix-map-projectile (kbd "a") #'counsel-projectile-org-agenda)
 (define-key my-prefix-map-projectile (kbd "c") #'counsel-projectile-org-capture)
 (define-key my-prefix-map-projectile (kbd "d") #'ivy-dispatching-done)
+(define-key my-prefix-map-projectile (kbd "f") #'projectile-find-file)
 (define-key my-prefix-map-projectile (kbd "i") #'projectile-ibuffer)
 (define-key my-prefix-map-projectile (kbd "s") #'my-project-status)
-(define-key my-prefix-map-projectile (kbd "t") #'counsel-projectile-org-agenda)
 
 ;;; Rings keymap
 (defvar my-prefix-map-rings (make-sparse-keymap) "Rings keymap")
@@ -67,6 +65,12 @@
 (define-key my-prefix-map-org (kbd "a") #'org-agenda)
 (define-key my-prefix-map-org (kbd "c") #'org-capture)
 
+;;; Magit keymap
+(defvar my-prefix-map-magit (make-sparse-keymap) "Magit keymap")
+(define-key my-prefix-map-magit (kbd "L") #'magit-log-buffer-file)
+(define-key my-prefix-map-magit (kbd "l") #'my-magit-log)
+(define-key my-prefix-map-magit (kbd "m") #'my-magit)
+
 ;;; Main keymap
 (defvar my-prefix-map (make-sparse-keymap) "Main keymap")
 (define-key my-prefix-map (kbd "C-l") #'er/expand-region)
@@ -74,6 +78,7 @@
 (define-key my-prefix-map (kbd "e") my-prefix-map-editor)
 (define-key my-prefix-map (kbd "h") #'hydra-master/body)
 (define-key my-prefix-map (kbd "l") #'recenter-top-bottom)
+(define-key my-prefix-map (kbd "m") my-prefix-map-magit)
 (define-key my-prefix-map (kbd "o") my-prefix-map-org)
 (define-key my-prefix-map (kbd "p") my-prefix-map-projectile)
 (define-key my-prefix-map (kbd "q") 'goto-last-change)
