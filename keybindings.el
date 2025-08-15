@@ -4,7 +4,13 @@
 
 ;;; Code:
 
-;;; Theme keymap
+(defvar my-prefix-map (make-sparse-keymap) "Main keymap")
+(defvar my-prefix-map-editor (make-sparse-keymap) "Editor keymap")
+(defvar my-prefix-map-magit (make-sparse-keymap) "Magit keymap")
+(defvar my-prefix-map-org (make-sparse-keymap) "Org keymap")
+(defvar my-prefix-map-projectile (make-sparse-keymap) "Projectile keymap")
+(defvar my-prefix-map-rings (make-sparse-keymap) "Rings keymap")
+(defvar my-prefix-map-search (make-sparse-keymap) "Search keymap")
 (defvar my-prefix-map-theme (make-sparse-keymap) "Theme keymap")
 
 (define-key my-prefix-map-theme (kbd "D") #'color-change-dark)
@@ -19,9 +25,6 @@
 (define-key my-prefix-map-theme (kbd "n") #'neon)
 (define-key my-prefix-map-theme (kbd "r") #'red)
 
-;;; Search keymap
-(defvar my-prefix-map-search (make-sparse-keymap) "Search keymap")
-
 (define-key my-prefix-map-search (kbd "1") #'my-grep-in-project-at-least-one-match-in-line)
 (define-key my-prefix-map-search (kbd "2") #'my-grep-in-project-multiple-matches-in-line)
 (define-key my-prefix-map-search (kbd "3") #'my-grep-in-project-exact)
@@ -29,9 +32,6 @@
 (define-key my-prefix-map-search (kbd "c") #'counsel-projectile-git-grep)
 (define-key my-prefix-map-search (kbd "o") #'occur)
 (define-key my-prefix-map-search (kbd "s") #'swiper-all)
-
-;;; Editor keymap
-(defvar my-prefix-map-editor (make-sparse-keymap) "Editor keymap")
 
 (define-key my-prefix-map-editor (kbd "<left>") #'scroll-right)
 (define-key my-prefix-map-editor (kbd "<right>") #'scroll-left)
@@ -53,9 +53,6 @@
 (define-key my-prefix-map-editor (kbd "t") #'transpose-lines)
 (define-key my-prefix-map-editor (kbd "w") #'whitespace-mode)
 
-;;; Projectile keymap
-(defvar my-prefix-map-projectile (make-sparse-keymap) "Projectile keymap")
-
 (define-key my-prefix-map-projectile (kbd "a") #'counsel-projectile-org-agenda)
 (define-key my-prefix-map-projectile (kbd "c") #'counsel-projectile-org-capture)
 (define-key my-prefix-map-projectile (kbd "d") #'ivy-dispatching-done)
@@ -64,27 +61,15 @@
 (define-key my-prefix-map-projectile (kbd "p") #'projectile-switch-project)
 (define-key my-prefix-map-projectile (kbd "s") #'my-project-status)
 
-;;; Rings keymap
-(defvar my-prefix-map-rings (make-sparse-keymap) "Rings keymap")
-
 (define-key my-prefix-map-rings (kbd "k") #'helm-show-kill-ring)
 (define-key my-prefix-map-rings (kbd "m") #'helm-all-mark-rings)
-
-;;; Org keymap
-(defvar my-prefix-map-org (make-sparse-keymap) "Org keymap")
 
 (define-key my-prefix-map-org (kbd "a") #'org-agenda)
 (define-key my-prefix-map-org (kbd "c") #'org-capture)
 
-;;; Magit keymap
-(defvar my-prefix-map-magit (make-sparse-keymap) "Magit keymap")
-
 (define-key my-prefix-map-magit (kbd "L") #'magit-log-buffer-file)
 (define-key my-prefix-map-magit (kbd "l") #'my-magit-log)
 (define-key my-prefix-map-magit (kbd "m") #'my-magit)
-
-;;; Main keymap
-(defvar my-prefix-map (make-sparse-keymap) "Main keymap")
 
 (define-key my-prefix-map (kbd "C-l") #'er/expand-region)
 (define-key my-prefix-map (kbd "b") #'helm-bookmarks)
@@ -99,38 +84,35 @@
 (define-key my-prefix-map (kbd "s") my-prefix-map-search)
 (define-key my-prefix-map (kbd "t") my-prefix-map-theme)
 
-;; Bind main keymap to "C-l"
-
-(global-set-key (kbd "C-l") my-prefix-map)
 (global-set-key (kbd "<C-down>") 'my-scroll-down-center)
 (global-set-key (kbd "<C-next>") 'projectile-next-project-buffer)
 (global-set-key (kbd "<C-prior>") 'projectile-previous-project-buffer)
 (global-set-key (kbd "<C-up>") 'my-scroll-up-center)
-(global-set-key (kbd "C-x <down>") 'windmove-down)
-(global-set-key (kbd "C-x <left>") 'windmove-left)
-(global-set-key (kbd "C-x <right>") 'windmove-right)
-(global-set-key (kbd "C-x <up>") 'windmove-up)
-(global-set-key (kbd "C-,") 'avy-goto-char-2)
-(global-set-key (kbd "<tab>") 'dabbrev-completion)
-(global-set-key (kbd "C-M-,") #'(lambda() (interactive) (scroll-right 10)))
-(global-set-key (kbd "C-M-.") #'(lambda() (interactive) (scroll-left 10)))
-(global-set-key (kbd "C-M-b") 'helm-buffers-list)
-(global-set-key (kbd "C-f") 'projectile-find-file)
-(global-set-key (kbd "C-i") 'ivy-dispatching-call)
-(global-set-key (kbd "C-p") 'projectile-switch-project)
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
-(global-set-key (kbd "C-b") 'projectile-switch-to-buffer)
-(global-set-key (kbd "M-H") 'sort-lines)
-(global-set-key (kbd "M-a") 'drag-stuff-up)
-(global-set-key (kbd "M-b") 'projectile-find-file)
-(global-set-key (kbd "M-z") 'drag-stuff-down)
 (global-set-key (kbd "<f5>") 'dap-step-in)
 (global-set-key (kbd "<f6>") 'dap-next)
 (global-set-key (kbd "<f7>") 'dap-java-debug)
 (global-set-key (kbd "<f8>") 'dap-continue)
 (global-set-key (kbd "<f9>") 'dap-breakpoint-toggle)
+(global-set-key (kbd "<tab>") 'dabbrev-completion)
+(global-set-key (kbd "C-,") 'avy-goto-char-2)
+(global-set-key (kbd "C-M-,") #'(lambda() (interactive) (scroll-right 10)))
+(global-set-key (kbd "C-M-.") #'(lambda() (interactive) (scroll-left 10)))
+(global-set-key (kbd "C-M-b") 'helm-buffers-list)
+(global-set-key (kbd "C-b") 'projectile-switch-to-buffer)
+(global-set-key (kbd "C-f") 'projectile-find-file)
+(global-set-key (kbd "C-i") 'ivy-dispatching-call)
+(global-set-key (kbd "C-l") my-prefix-map)
+(global-set-key (kbd "C-p") 'projectile-switch-project)
+(global-set-key (kbd "C-x <down>") 'windmove-down)
+(global-set-key (kbd "C-x <left>") 'windmove-left)
+(global-set-key (kbd "C-x <right>") 'windmove-right)
+(global-set-key (kbd "C-x <up>") 'windmove-up)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "M-H") 'sort-lines)
+(global-set-key (kbd "M-a") 'drag-stuff-up)
+(global-set-key (kbd "M-b") 'projectile-find-file)
+(global-set-key (kbd "M-z") 'drag-stuff-down)
 
-;;; helper functions
 (defun default ()
   (interactive)
   (my-set-theme INDEX-DEFAULT))
