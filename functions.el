@@ -23,6 +23,11 @@
                              (projectile-project-root))))
     (compilation-start grep-command 'grep-mode)))
 
+(defun my-grep-in-project-at-least-one-match-in-line-case-sensitive (search-strings)
+  "Search space-separated, case sensitive, at least one match per line."
+  (interactive "MSearch: (space-separated, case insensitive, at least one match per line, use \\ to escape): ")
+  (my-grep-in-project2 search-strings "git --no-pager grep -n -E --break -e %s" " -e "))
+
 (defun my-grep-in-project2 (search-strings grep-string grep-concat)
   "Basic git grep search."
   (let* ((search-list (split-string search-strings " " t " "))

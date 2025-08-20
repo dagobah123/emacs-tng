@@ -28,6 +28,7 @@
 (define-key my-prefix-map-search (kbd "1") #'my-grep-in-project-at-least-one-match-in-line)
 (define-key my-prefix-map-search (kbd "2") #'my-grep-in-project-multiple-matches-in-line)
 (define-key my-prefix-map-search (kbd "3") #'my-grep-in-project-exact)
+(define-key my-prefix-map-search (kbd "4") #'my-grep-in-project-at-least-one-match-in-line-case-sensitive)
 (define-key my-prefix-map-search (kbd "a") #'ag)
 (define-key my-prefix-map-search (kbd "c") #'counsel-projectile-git-grep)
 (define-key my-prefix-map-search (kbd "o") #'occur)
@@ -70,6 +71,7 @@
 (define-key my-prefix-map-org (kbd "a") #'org-agenda)
 (define-key my-prefix-map-org (kbd "c") #'org-capture)
 
+(define-key my-prefix-map-magit (kbd "b") #'magit-blame)
 (define-key my-prefix-map-magit (kbd "L") #'magit-log-buffer-file)
 (define-key my-prefix-map-magit (kbd "l") #'my-magit-log)
 (define-key my-prefix-map-magit (kbd "m") #'my-magit)
