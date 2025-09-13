@@ -134,4 +134,7 @@
 (use-package delight
   :ensure t)
 
+(use-package nov
+  :ensure t)
+
 ;;; packages.el ends here

@@ -24,6 +24,7 @@
 (setq text-delete "#ff0000")
 (setq text-directory "#a63c73")
 (setq text-hl "#000000")
+(setq text-hl-lower "#999999")
 (setq text-match-1 "#000000")
 (setq text-match-2 "#000000")
 (setq text-match-2-a "#000000")

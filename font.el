@@ -7,4 +7,3 @@
 (set-frame-font "DejaVu Sans Mono 16" nil t)
 
 ;;; font.el ends here
-
