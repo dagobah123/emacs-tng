@@ -5,7 +5,7 @@
 (load-file "~/.emacs.d/theme/common/variables.el")
 
 (setq background-diff-added "#d0edd0")
-(setq background-diff-added-highlight "#cceecc")
+(setq background-diff-added-highlight "#77ff77")
 (setq background-diff-current-A "#ffdddd")
 (setq background-diff-current-Ancestor "#dddddd")
 (setq background-diff-current-B "#ddffdd")
@@ -23,6 +23,6 @@
 (setq background-diff-odd-B "#dddddd")
 (setq background-diff-odd-C "#dddddd")
 (setq background-diff-removed "#fcdede")
-(setq background-diff-removed-highlight "#eecccc")
+(setq background-diff-removed-highlight "#ff9999")
 
 ;;; theme-default-diff-light.el ends here

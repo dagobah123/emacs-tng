@@ -45,6 +45,7 @@
 (defvar background-directory nil ".")
 (defvar background-fringe nil ".")
 (defvar background-hl nil ".")
+(defvar background-hl-low nil ".")
 (defvar background-low nil ".")
 (defvar background-magit nil ".")
 (defvar background-magit-branch-local nil ".")

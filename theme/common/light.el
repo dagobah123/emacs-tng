@@ -1,30 +1,31 @@
-;; -*- lexical-binding: t; -*-
-4;;; light --- common colors
+;;; light --- common colors  -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 
 (load-file "~/.emacs.d/theme/common/variables.el")
 
 (setq background-cursor "#000000")
-(setq background-directory "#ffddeb")
+(setq background-directory "#bbe8ff")
 (setq background-fringe "#eeeeee")
 (setq background-hl "#fff5a9")
-(setq background-magit "#eeeeee")
-(setq background-magit-dark "#f2f2f2")
-(setq background-match-1 "#ffddeb")
+(setq background-hl-low "#f6f3d8")
+(setq background-match-1 "#ffffbb")
 (setq background-match-2 "#bbffbb")
-(setq background-match-2-a "#bbffbb")
-(setq background-match-2-b "#bbbbff")
-(setq background-match-2-c "#ffbbbb")
-(setq background-match-2-d "#ffffbb")
+(setq background-match-2-a "#ffbbbb")
+(setq background-match-2-b "#ffffbb")
+(setq background-match-2-c "#bbe8ff")
+(setq background-match-2-d "#bbbbff")
 (setq background-mode-line "#cccccc")
 (setq background-mode-line-inactive "#eeeeee")
 (setq background-region "#bbffbb")
 (setq background-tooltip "#eeeeee")
 (setq text-delete "#ff0000")
-(setq text-directory "#a63c73")
+(setq text-directory "#000000")
+(setq text-highlight-1 "#0000c0")
+(setq text-highlight-2 "#7f0055")
+(setq text-highlight-3 "#b30271")
 (setq text-hl "#000000")
-(setq text-hl-lower "#999999")
+(setq text-hl-low "#000000")
 (setq text-match-1 "#000000")
 (setq text-match-2 "#000000")
 (setq text-match-2-a "#000000")
