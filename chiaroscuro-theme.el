@@ -350,6 +350,7 @@
 `(popup-tip-face ((t (:foreground ,text-normal :background ,background-fringe :bold nil :italic nil ))))
 `(region ((t (:foreground ,text-region :background ,background-region ))))
 `(secondary-selection ((t (:foreground ,text-normal :background unspecified ))))
+`(shadow ((t (:foreground ,text-low :background unspecified ))))
 `(show-paren-match ((t (:foreground ,text-match-2-a :background ,background-match-2-a :bold t ))))
 `(shr-link ((t (:foreground ,text-link :background ,background :underline t ))))
 `(speed-type-correct ((t (:foreground ,text-lower ))))
@@ -395,7 +396,6 @@
 `(xref-match ((t (:foreground ,text-normal :background unspecified :bold t ))))
 `(ztreep-diff-model-add-face ((t (:foreground ,text-normal :background unspecified ))))
 `(ztreep-diff-model-normal-face ((t (:foreground ,text-normal :background unspecified ))))
-`(shadow ((t (:foreground ,text-low :background unspecified ))))
 )
 
 ;;;###autoload
