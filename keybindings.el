@@ -5,6 +5,7 @@
 ;;; Code:
 
 (defvar my-prefix-map (make-sparse-keymap) "Main keymap")
+(defvar my-prefix-map-avy (make-sparse-keymap) "Avy keymap")
 (defvar my-prefix-map-editor (make-sparse-keymap) "Editor keymap")
 (defvar my-prefix-map-magit (make-sparse-keymap) "Magit keymap")
 (defvar my-prefix-map-org (make-sparse-keymap) "Org keymap")
@@ -71,12 +72,18 @@
 (define-key my-prefix-map-org (kbd "a") #'org-agenda)
 (define-key my-prefix-map-org (kbd "c") #'org-capture)
 
+(define-key my-prefix-map-avy (kbd ",") #'avy-goto-char-in-line)
+(define-key my-prefix-map-avy (kbd "L") #'avy-linum-mode)
+(define-key my-prefix-map-avy (kbd "a") #'dabbrev-completion)
+(define-key my-prefix-map-avy (kbd "l") #'avy-goto-line)
+
 (define-key my-prefix-map-magit (kbd "b") #'magit-blame)
 (define-key my-prefix-map-magit (kbd "L") #'magit-log-buffer-file)
 (define-key my-prefix-map-magit (kbd "l") #'my-magit-log)
 (define-key my-prefix-map-magit (kbd "m") #'my-magit)
 
 (define-key my-prefix-map (kbd "C-l") #'er/expand-region)
+(define-key my-prefix-map (kbd "a") my-prefix-map-avy)
 (define-key my-prefix-map (kbd "b") #'helm-bookmarks)
 (define-key my-prefix-map (kbd "e") my-prefix-map-editor)
 (define-key my-prefix-map (kbd "h") #'hydra-master/body)
