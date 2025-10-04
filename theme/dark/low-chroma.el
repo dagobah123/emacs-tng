@@ -5,7 +5,6 @@
 (load-file "~/.emacs.d/theme/common/variables.el")
 
 (setq background "#000000")
-(setq background-low "#222222")
 (setq text-comment "#867d91")
 (setq text-constant "#674c87")
 (setq text-diff-added "#445544")

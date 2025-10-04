@@ -9,6 +9,7 @@
 (setq background-fringe "#222222")
 (setq background-hl "#666600")
 (setq background-hl-low "#333300")
+(setq background-low "#111111")
 (setq background-match-1 "#666600")
 (setq background-match-2 "#006600")
 (setq background-match-3 "#660000")
@@ -16,12 +17,6 @@
 (setq background-match-2-b "#666600")
 (setq background-match-2-c "#666600")
 (setq background-match-2-d "#666600")
-
-;(setq background-match-2-a "#660000")
-;(setq background-match-2-b "#666600")
-;(setq background-match-2-c "#000066")
-;(setq background-match-2-d "#660066")
-
 (setq background-mode-line "#003300")
 (setq background-mode-line-inactive "#222222")
 (setq background-region "#962f1b")

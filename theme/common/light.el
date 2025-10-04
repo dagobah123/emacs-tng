@@ -9,6 +9,7 @@
 (setq background-fringe "#eeeeee")
 (setq background-hl "#fff5a9")
 (setq background-hl-low "#f6f3d8")
+(setq background-low "#ededed")
 (setq background-match-1 "#ffffbb")
 (setq background-match-2 "#bbffbb")
 (setq background-match-3 "#ffbbbb")

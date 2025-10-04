@@ -9,7 +9,6 @@
 (setq alert-3 "#000000")
 (setq background "#ffffff")
 (setq background-hl "#666666")
-(setq background-low "#efefef")
 (setq background-region "#bbbbbb")
 (setq text-branch-current "#000000")
 (setq text-constant "#000000")
