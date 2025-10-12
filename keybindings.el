@@ -14,17 +14,17 @@
 (defvar my-prefix-map-search (make-sparse-keymap) "Search keymap")
 (defvar my-prefix-map-theme (make-sparse-keymap) "Theme keymap")
 
-(define-key my-prefix-map-theme (kbd "D") #'color-change-dark)
-(define-key my-prefix-map-theme (kbd "L") #'color-change-light)
-(define-key my-prefix-map-theme (kbd "b") #'blue)
-(define-key my-prefix-map-theme (kbd "c") #'casablanca)
-(define-key my-prefix-map-theme (kbd "d") #'default)
-(define-key my-prefix-map-theme (kbd "e") #'eclipse)
-(define-key my-prefix-map-theme (kbd "g") #'gray)
-(define-key my-prefix-map-theme (kbd "h") #'high-contrast)
-(define-key my-prefix-map-theme (kbd "l") #'low-chroma)
-(define-key my-prefix-map-theme (kbd "n") #'neon)
-(define-key my-prefix-map-theme (kbd "r") #'red)
+(define-key my-prefix-map-theme (kbd "d") #'my-theme-default)
+(define-key my-prefix-map-theme (kbd "e") #'my-theme-eclipse)
+(define-key my-prefix-map-theme (kbd "L") #'my-theme-color-change-light)
+(define-key my-prefix-map-theme (kbd "h") #'my-theme-high-contrast)
+(define-key my-prefix-map-theme (kbd "g") #'my-theme-gray)
+(define-key my-prefix-map-theme (kbd "l") #'my-theme-low-chroma)
+(define-key my-prefix-map-theme (kbd "b") #'my-theme-blue)
+(define-key my-prefix-map-theme (kbd "n") #'my-theme-neon)
+(define-key my-prefix-map-theme (kbd "r") #'my-theme-red)
+(define-key my-prefix-map-theme (kbd "c") #'my-theme-casablanca)
+(define-key my-prefix-map-theme (kbd "D") #'my-theme-color-change-dark)
 
 (define-key my-prefix-map-search (kbd "1") #'my-grep-in-project-at-least-one-match-in-line)
 (define-key my-prefix-map-search (kbd "2") #'my-grep-in-project-multiple-matches-in-line)
@@ -126,53 +126,5 @@
 ;  (unless (derived-mode-p 'org-mode 'org-agenda-mode 'magit-status-mode 'magit-log-mode 'magit-revision-mode)
 ;    (local-set-key (kbd "<tab>") #'dabbrev-completion)))
 ;(add-hook 'after-change-major-mode-hook #'my-dabbrev-setup)
-
-(defun default ()
-  (interactive)
-  (my-set-theme INDEX-DEFAULT))
-
-(defun eclipse ()
-  (interactive)
-  (my-set-theme INDEX-ECLIPSE))
-
-(defun color-change-light ()
-  (interactive)
-  (my-set-theme INDEX-COLOR-CHANGE-LIGHT))
-
-(defun high-contrast ()
-  (interactive)
-  (my-set-theme INDEX-HIGH-CONTRAST))
-
-(defun gray ()
-  (interactive)
-  (my-set-theme INDEX-GRAY))
-
-(defun low-chroma ()
-  (interactive)
-  (my-set-theme INDEX-LOW-CHROMA))
-
-(defun blue ()
-  (interactive)
-  (my-set-theme INDEX-BLUE))
-
-(defun neon ()
-  (interactive)
-  (my-set-theme INDEX-NEON))
-
-(defun color-change-dark ()
-  (interactive)
-  (my-set-theme INDEX-COLOR-CHANGE-DARK))
-
-(defun red ()
-  (interactive)
-  (my-set-theme INDEX-RED))
-
-(defun casablanca ()
-  (interactive)
-  (my-set-theme INDEX-CASABLANCA))
-
-(defun color-change-dark ()
-  (interactive)
-  (my-set-theme INDEX-COLOR-CHANGE-DARK))
 
 ;;; keybindings.el ends here

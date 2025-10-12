@@ -173,4 +173,53 @@
               (setq result file))))))
     result))
 
+(defun my-theme-default ()
+  (interactive)
+  (my-set-theme INDEX-COLOR-CHANGE-DARK)
+  (my-theme-up))
+
+(defun my-theme-eclipse ()
+  (interactive)
+  (my-set-theme INDEX-ECLIPSE))
+
+(defun my-theme-color-change-light ()
+  (interactive)
+  (my-set-theme INDEX-COLOR-CHANGE-LIGHT))
+
+(defun my-theme-high-contrast ()
+  (interactive)
+  (my-set-theme INDEX-HIGH-CONTRAST))
+
+(defun my-theme-gray ()
+  (interactive)
+  (my-set-theme INDEX-GRAY))
+
+(defun my-theme-low-chroma ()
+  (interactive)
+  (my-set-theme INDEX-LOW-CHROMA))
+
+(defun my-theme-blue ()
+  (interactive)
+  (my-set-theme INDEX-BLUE))
+
+(defun my-theme-neon ()
+  (interactive)
+  (my-set-theme INDEX-NEON))
+
+(defun my-theme-color-change-dark ()
+  (interactive)
+  (my-set-theme INDEX-COLOR-CHANGE-DARK))
+
+(defun my-theme-red ()
+  (interactive)
+  (my-set-theme INDEX-RED))
+
+(defun my-theme-casablanca ()
+  (interactive)
+  (my-set-theme INDEX-CASABLANCA))
+
+(defun color-change-dark ()
+  (interactive)
+  (my-set-theme INDEX-COLOR-CHANGE-DARK))
+
 ;;; functions.el ends here

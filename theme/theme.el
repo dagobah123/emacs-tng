@@ -6,17 +6,15 @@
 
 (setq INDEX-DEFAULT             1)
 (setq INDEX-ECLIPSE             2)
-(setq INDEX-CONSOLE-LIGHT       3)
-(setq INDEX-COLOR-CHANGE-LIGHT  4)
-(setq INDEX-HIGH-CONTRAST       5)
-(setq INDEX-GRAY                6)
-(setq INDEX-LOW-CHROMA          7)
-(setq INDEX-BLUE                8)
-(setq INDEX-NEON                9)
-(setq INDEX-CONSOLE-DARK       10)
-(setq INDEX-RED                11)
-(setq INDEX-CASABLANCA         12)
-(setq INDEX-COLOR-CHANGE-DARK  13)
+(setq INDEX-COLOR-CHANGE-LIGHT  3)
+(setq INDEX-HIGH-CONTRAST       4)
+(setq INDEX-GRAY                5)
+(setq INDEX-LOW-CHROMA          6)
+(setq INDEX-BLUE                7)
+(setq INDEX-NEON                8)
+(setq INDEX-RED                 9)
+(setq INDEX-CASABLANCA         10)
+(setq INDEX-COLOR-CHANGE-DARK  11)
 
 (setq INDEX-CHIAROSCURO 0)
 (setq theme-index 0)
@@ -103,20 +101,16 @@
                     chiaroscuro
                     chiaroscuro
                     chiaroscuro
-                    chiaroscuro
-                    chiaroscuro
                     chiaroscuro))
 
 (setq themes-list-names '("default"
                           "eclipse"
-                          "console light"
                           "color change light"
                           "high contrast"
                           "gray"
                           "low chroma"
                           "blue"
                           "neon"
-                          "console dark"
                           "red"
                           "casablanca"
                           "color change dark"))
