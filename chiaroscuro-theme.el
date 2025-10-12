@@ -260,7 +260,7 @@
 `(magit-diff-removed ((t (:foreground "#000000" :background ,background-diff-removed ))))
 `(magit-diff-removed-highlight ((t (:foreground "#000000" :background ,background-diff-removed-highlight ))))
 `(magit-hash ((t (:foreground ,text-low ))))
-`(magit-header-line ((t (:foreground ,text-hl-low :background ,background-hl-low :bold t ))))
+`(magit-header-line ((t (:foreground ,text-match-3 :background ,background-match-3 :bold t ))))
 `(magit-header-line-key ((t (:foreground ,text-normal :bold t ))))
 `(magit-keyword-squash ((t (:foreground ,text-normal ))))
 `(magit-log-author ((t (:foreground ,text-hl-low ))))
