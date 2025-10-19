@@ -28,6 +28,7 @@
 (setq text-highlight-3 "#b30271")
 (setq text-hl "#000000")
 (setq text-hl-low "#000000")
+(setq text-hl-lower "#000000")
 (setq text-match-1 "#000000")
 (setq text-match-2 "#000000")
 (setq text-match-3 "#000000")

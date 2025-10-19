@@ -28,6 +28,7 @@
 (setq text-highlight-3 "#00ff00")
 (setq text-hl "#ffff00")
 (setq text-hl-low "#0099ff")
+(setq text-hl-lower "#bbbb00")
 (setq text-match-1 "#ffff00")
 (setq text-match-2 "#00ff00")
 (setq text-match-3 "#ff0000")
@@ -45,6 +46,6 @@
 (setq text-mode-line "#00cc00")
 (setq text-mode-line-inactive "#666666")
 (setq text-region "#ff7d63")
-(setq text-whitespace "#333333")
+(setq text-whitespace "#ff00ff")
 
 ;;; dark.el ends here
