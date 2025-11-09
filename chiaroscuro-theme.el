@@ -173,7 +173,7 @@
 `(font-lock-regexp-grouping-construct ((t (:foreground ,text-low ))))
 `(font-lock-string-face ((t (:foreground ,text-comment ))))
 `(font-lock-type-face ((t (:foreground ,text-type :bold t ))))
-`(font-lock-variable-name-face ((t (:foreground ,text-variable ))))
+`(font-lock-variable-name-face ((t (:foreground ,text-variable :bold t ))))
 `(font-lock-variable-use-face ((t (:foreground ,text-variable ))))
 `(font-lock-warning-face ((t (:foreground ,text-mode-line ))))
 `(fringe ((t (:foreground ,text-normal :background ,background-fringe ))))
