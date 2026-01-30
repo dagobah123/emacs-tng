@@ -24,7 +24,8 @@
         (,INDEX-NEON . "~/.emacs.d/theme/dark/neon.el")
         (,INDEX-RED . "~/.emacs.d/theme/dark/red.el")
         (,INDEX-CASABLANCA . "~/.emacs.d/theme/dark/casablanca.el")
-        (,INDEX-COLOR-CHANGE-DARK . "~/.emacs.d/theme/color-changer/color-changer.el")))
+        (,INDEX-COLOR-CHANGE-DARK . "~/.emacs.d/theme/color-changer/color-changer.el")
+        (,INDEX-ELSA . "~/.emacs.d/theme/dark/elsa.el")))
 
 (let ((theme-file (assoc-default INDEX-CHIAROSCURO theme-map)))
   (when (and theme-file (> INDEX-CHIAROSCURO INDEX-DEFAULT))

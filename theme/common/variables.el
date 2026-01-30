@@ -9,6 +9,7 @@
 (defvar INDEX-COLOR-CHANGE-LIGHT nil ".")
 (defvar INDEX-DEFAULT nil ".")
 (defvar INDEX-ECLIPSE nil ".")
+(defvar INDEX-ELSA nil ".")
 (defvar INDEX-GRAY nil ".")
 (defvar INDEX-HIGH-CONTRAST nil ".")
 (defvar INDEX-LOW-CHROMA nil ".")

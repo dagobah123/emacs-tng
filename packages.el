@@ -37,11 +37,6 @@
   (("C-s" . swiper)("C-r" . swiper-thing-at-point))
   :delight " s")
 
-(use-package undo-tree
-  :ensure t
-  :config (global-undo-tree-mode)
-  :delight " ut")
-
 (use-package rainbow-mode
   :ensure t
   :hook (emacs-lisp-mode text-mode lisp-mode)

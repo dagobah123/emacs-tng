@@ -15,6 +15,7 @@
 (setq INDEX-RED                 9)
 (setq INDEX-CASABLANCA         10)
 (setq INDEX-COLOR-CHANGE-DARK  11)
+(setq INDEX-ELSA               12)
 
 (setq INDEX-CHIAROSCURO 0)
 (setq theme-index 0)
@@ -101,6 +102,7 @@
                     chiaroscuro
                     chiaroscuro
                     chiaroscuro
+                    chiaroscuro
                     chiaroscuro))
 
 (setq themes-list-names '("default"
@@ -113,7 +115,8 @@
                           "neon"
                           "red"
                           "casablanca"
-                          "color change dark"))
+                          "color change dark"
+                          "elsa"))
 
 (defvar theme-index 0 "Index representing the current theme")
 (setq number-of-themes (length themes-list))

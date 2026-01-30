@@ -222,4 +222,8 @@
   (interactive)
   (my-set-theme INDEX-COLOR-CHANGE-DARK))
 
+(defun my-theme-elsa ()
+  (interactive)
+  (my-set-theme INDEX-ELSA))
+
 ;;; functions.el ends here

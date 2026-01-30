@@ -25,6 +25,7 @@
 (define-key my-prefix-map-theme (kbd "r") #'my-theme-red)
 (define-key my-prefix-map-theme (kbd "c") #'my-theme-casablanca)
 (define-key my-prefix-map-theme (kbd "D") #'my-theme-color-change-dark)
+(define-key my-prefix-map-theme (kbd "E") #'my-theme-elsa)
 
 (define-key my-prefix-map-search (kbd "1") #'my-grep-in-project-at-least-one-match-in-line)
 (define-key my-prefix-map-search (kbd "2") #'my-grep-in-project-multiple-matches-in-line)
@@ -95,6 +96,7 @@
 (define-key my-prefix-map (kbd "r") my-prefix-map-rings)
 (define-key my-prefix-map (kbd "s") my-prefix-map-search)
 (define-key my-prefix-map (kbd "t") my-prefix-map-theme)
+(define-key my-prefix-map (kbd ",") #'avy-goto-char-2)
 
 (global-set-key (kbd "<C-down>") 'my-scroll-down-center)
 (global-set-key (kbd "<C-next>") 'projectile-next-project-buffer)
