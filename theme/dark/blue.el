@@ -10,7 +10,6 @@
 (setq text-comment "#54ff9f")
 (setq text-constant "#c3ac88")
 (setq text-function "#41a1ff")
-(setq text-info "#c3ac88")
 (setq text-keyword "#cd853f")
 (setq text-line-number "#c3ac88")
 (setq text-link "#1874cd")

@@ -12,7 +12,6 @@
 (setq text-diff-removed "#554444")
 (setq text-diff-removed-highlight "#ca6666")
 (setq text-function "#4daa81")
-(setq text-info "#ba9a74")
 (setq text-keyword "#9d7877")
 (setq text-line-number "#557755")
 (setq text-link "#9d7877")

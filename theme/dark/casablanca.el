@@ -8,7 +8,6 @@
 (setq text-comment "#555555")
 (setq text-constant "#969696")
 (setq text-function "#c7c7c7")
-(setq text-info "#ff0000")
 (setq text-keyword "#5c5c5c")
 (setq text-line-number "#595959")
 (setq text-link "#9d9d9d")

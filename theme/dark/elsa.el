@@ -9,7 +9,6 @@
 (setq text-comment "#c15df3")
 (setq text-constant "#0077a6")
 (setq text-function "#5baff8")
-(setq text-info "#508740")
 (setq text-keyword "#5a68ac")
 (setq text-line-number "#758199")
 (setq text-link "#0077a6")
@@ -20,6 +19,5 @@
 (setq text-preprocessor "#815696")
 (setq text-type "#6b0a95")
 (setq text-variable "#055167")
-(setq text-whitespace "#39447f")
 
 ;;; elsa.el ends here

@@ -24,7 +24,6 @@
 (setq text-function "#000000")
 (setq text-function "#000000")
 (setq text-hl "#ffffff")
-(setq text-info "#000000")
 (setq text-keyword "#000000")
 (setq text-link "#000000")
 (setq text-low "#000000")
