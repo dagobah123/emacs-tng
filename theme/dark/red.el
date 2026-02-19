@@ -13,7 +13,7 @@
 (setq text-highlight "#3369d0")
 (setq text-keyword "#5469ac")
 (setq text-line-number "#7a2e2a")
-(setq text-link "#5469ac")
+(setq text-link "#6785e2")
 (setq text-low "#775555")
 (setq text-lower "#a26862")
 (setq text-mode-line "#fc6c6c")
