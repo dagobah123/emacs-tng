@@ -132,4 +132,12 @@
 (use-package nov
   :ensure t)
 
+(use-package gptel
+  :ensure t
+  :config
+  (setq gptel-model "gemini-2.5-flash")
+  (setq gptel-backend (gptel-make-gemini "Gemini"
+                        :key ""
+                        :stream t)))
+
 ;;; packages.el ends here

@@ -145,6 +145,11 @@
   (re-search-forward regexp-member nil t)
   (evil-first-non-blank))
 
+(defun my-compile ()
+  "Compile and enter."
+  (interactive)
+  (compile "g++ main.cpp && ./a.out"))
+
 (defun my-find-file-at-point-in-project ()
   "Find file at point in project."
   (interactive)

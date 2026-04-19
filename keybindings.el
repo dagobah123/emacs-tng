@@ -58,6 +58,7 @@
 (define-key my-prefix-map-editor (kbd "s") #'sort-lines)
 (define-key my-prefix-map-editor (kbd "t") #'transpose-lines)
 (define-key my-prefix-map-editor (kbd "w") #'whitespace-mode)
+(define-key my-prefix-map-editor (kbd "x") #'my-compile)
 
 (define-key my-prefix-map-projectile (kbd "a") #'counsel-projectile-org-agenda)
 (define-key my-prefix-map-projectile (kbd "c") #'counsel-projectile-org-capture)
