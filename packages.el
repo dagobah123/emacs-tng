@@ -132,12 +132,37 @@
 (use-package nov
   :ensure t)
 
+;;;(use-package gptel
+;;;  :ensure t
+;;;  :config
+;;;  (setq gptel-model "gemini-2.5-flash")
+;;;  (setq gptel-backend (gptel-make-gemini "Gemini"
+;;;                        :key ""
+;;;                        :stream t)))
+
 (use-package gptel
   :ensure t
   :config
-  (setq gptel-model "gemini-2.5-flash")
-  (setq gptel-backend (gptel-make-gemini "Gemini"
-                        :key ""
-                        :stream t)))
+  ;;;(gptel-make-gemini "Gemini"
+  ;;;  :key ""
+  ;;;  :stream t)
+  (let ((ollama-bknd (gptel-make-ollama "Ollama-Local"
+                       :host "localhost:11434"
+                       :models '("deepseek-coder-v2")
+                       :stream t)))
+    (setq gptel-backend ollama-bknd
+          gptel-model "deepseek-coder-v2")))
+
+(use-package ollama-buddy
+  :ensure t
+  :bind
+  ("C-c o" . ollama-buddy-role-transient-menu)
+  ("C-c O" . ollama-buddy-transient-menu))
+
+(use-package chatgpt-shell
+  :ensure t
+  :custom
+  ;; This tells the package where to find your local Ollama instance
+  (chatgpt-shell-ollama-api-url-base "http://localhost:11434"))
 
 ;;; packages.el ends here
