@@ -4,6 +4,7 @@
 
 (defvar INDEX-BLUE nil ".")
 (defvar INDEX-CASABLANCA nil ".")
+(defvar INDEX-UBUNTU nil ".")
 (defvar INDEX-CHIAROSCURO nil ".")
 (defvar INDEX-COLOR-CHANGE-DARK nil ".")
 (defvar INDEX-COLOR-CHANGE-LIGHT nil ".")

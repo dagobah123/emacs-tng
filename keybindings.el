@@ -24,6 +24,7 @@
 (define-key my-prefix-map-theme (kbd "n") #'my-theme-neon)
 (define-key my-prefix-map-theme (kbd "r") #'my-theme-red)
 (define-key my-prefix-map-theme (kbd "c") #'my-theme-casablanca)
+(define-key my-prefix-map-theme (kbd "u") #'my-theme-ubuntu)
 (define-key my-prefix-map-theme (kbd "D") #'my-theme-color-change-dark)
 (define-key my-prefix-map-theme (kbd "E") #'my-theme-elsa)
 

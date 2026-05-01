@@ -223,6 +223,10 @@
   (interactive)
   (my-set-theme INDEX-CASABLANCA))
 
+(defun my-theme-ubuntu ()
+  (interactive)
+  (my-set-theme INDEX-UBUNTU))
+
 (defun color-change-dark ()
   (interactive)
   (my-set-theme INDEX-COLOR-CHANGE-DARK))
