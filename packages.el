@@ -148,10 +148,10 @@
   ;;;  :stream t)
   (let ((ollama-bknd (gptel-make-ollama "Ollama-Local"
                        :host "localhost:11434"
-                       :models '("qwen2.5-coder")
+                       :models '("qwen2.5-coder:7b")
                        :stream t)))
     (setq gptel-backend ollama-bknd
-          gptel-model "qwen2.5-coder")))
+          gptel-model "qwen2.5-coder:7b")))
 
 (use-package ollama-buddy
   :ensure t

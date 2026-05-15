@@ -126,6 +126,8 @@
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 
+(setq x-super-keysym 'ctrl) ; Remap super key to control
+
 ;(defun my-dabbrev-setup ()
 ;  (unless (derived-mode-p 'org-mode 'org-agenda-mode 'magit-status-mode 'magit-log-mode 'magit-revision-mode)
 ;    (local-set-key (kbd "<tab>") #'dabbrev-completion)))
