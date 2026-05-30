@@ -235,4 +235,29 @@
   (interactive)
   (my-set-theme INDEX-ELSA))
 
+(defun my-restart-ollama ()
+  "Restart Ollama service and display status/output."
+  (interactive)
+  (let ((buffer (get-buffer-create "*Ollama Restart*")))
+    (with-current-buffer buffer
+      (erase-buffer)
+      (insert "Restarting Ollama...\n\n"))
+
+    ;; Restart service
+    (call-process-shell-command
+     "sudo systemctl restart ollama"
+     nil buffer t)
+
+    ;; Show systemd status
+    (call-process-shell-command
+     "systemctl status ollama --no-pager"
+     nil buffer t)
+
+    ;; Show running models
+    (call-process-shell-command
+     "ollama ps"
+     nil buffer t)
+
+    (display-buffer buffer)))
+
 ;;; functions.el ends here

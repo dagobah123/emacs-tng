@@ -5,7 +5,7 @@
 (load-file "~/.emacs.d/theme/common/variables.el")
 
 (setq background-cursor "#000000")
-(setq background-directory "#bbe8ff")
+(setq background-directory "#f5ecff")
 (setq background-fringe "#eeeeee")
 (setq background-hl "#fff5a9")
 (setq background-hl-low "#f6f3d8")
