@@ -36,8 +36,8 @@
                                (mapconcat 'shell-quote-argument search-list grep-concat)))
          (grep-buffer-name "*Git Grep Results*"))
     (compilation-start grep-command 'grep-mode
-                       (lambda (mode-name)
-                         (format "Search: %s" mode-name)))
+                       (lambda (name)
+                         (format "Search: %s" name)))
     (with-current-buffer grep-buffer-name
       (while (search-forward-regexp (rx bol (group (1+ digit)) ":" (group (1+ not-newline)) eol) nil t)
         (replace-match (format "%s:%s" (file-name-nondirectory (match-string 2)) (match-string 1)))))))
@@ -49,7 +49,7 @@
   (kill-line)
   (yank)
   (open-line 1)
-  (next-line 1)
+  (forward-line 1)
   (yank))
 
 (defun my-new-line ()
@@ -80,14 +80,14 @@
 (defun my-scroll-down-center ()
   "Scroll down."
   (interactive)
-  (next-line 1)
+  (forward-line 1)
   (back-to-indentation)
   (recenter))
 
 (defun my-scroll-up-center ()
   "Scroll up."
   (interactive)
-  (previous-line 1)
+  (forward-line -1)
   (back-to-indentation)
   (recenter))
 
@@ -134,16 +134,16 @@
 (defun my-goto-class ()
   "Go to class."
   (interactive)
-  (beginning-of-buffer)
+  (goto-char (point-min))
   (re-search-forward regexp-class nil t)
-  (evil-first-non-blank))
+  (back-to-indentation))
 
 (defun my-goto-member ()
   "Go to member."
   (interactive)
-  (beginning-of-buffer)
+  (goto-char (point-min))
   (re-search-forward regexp-member nil t)
-  (evil-first-non-blank))
+  (back-to-indentation))
 
 (defun my-compile ()
   "Compile and enter."
@@ -170,8 +170,7 @@
       (let ((file-name (file-name-nondirectory file)))
         (unless (string-prefix-p "." file-name)  ; Ignore hidden files/dirs
           (if (file-directory-p file)
-              (when (not (member file-name '("." "..")))
-                (setq found (my-find-file-recursively file filename))
+              (let ((found (my-find-file-recursively file filename)))
                 (when found
                   (setq result found)))
             (when (string= file-name filename)
@@ -179,61 +178,72 @@
     result))
 
 (defun my-theme-default ()
+  "Switch to the default theme."
   (interactive)
   (my-set-theme INDEX-COLOR-CHANGE-DARK)
   (my-theme-up))
 
 (defun my-theme-eclipse ()
+  "Switch to the eclipse theme."
   (interactive)
   (my-set-theme INDEX-ECLIPSE))
 
 (defun my-theme-color-change-light ()
+  "Switch to the color change light theme."
   (interactive)
   (my-set-theme INDEX-COLOR-CHANGE-LIGHT))
 
 (defun my-theme-high-contrast ()
+  "Switch to the high contrast theme."
   (interactive)
   (my-set-theme INDEX-HIGH-CONTRAST))
 
 (defun my-theme-gray ()
+  "Switch to the gray theme."
   (interactive)
   (my-set-theme INDEX-GRAY))
 
 (defun my-theme-low-chroma ()
+  "Switch to the low chroma theme."
   (interactive)
   (my-set-theme INDEX-LOW-CHROMA))
 
 (defun my-theme-blue ()
+  "Switch to the blue theme."
   (interactive)
   (my-set-theme INDEX-BLUE))
 
 (defun my-theme-neon ()
+  "Switch to the neon theme."
   (interactive)
   (my-set-theme INDEX-NEON))
 
 (defun my-theme-color-change-dark ()
+  "Switch to the color change dark theme."
   (interactive)
   (my-set-theme INDEX-COLOR-CHANGE-DARK))
 
 (defun my-theme-red ()
+  "Switch to the red theme."
   (interactive)
   (my-set-theme INDEX-RED))
 
 (defun my-theme-casablanca ()
+  "Switch to the casablanca theme."
   (interactive)
   (my-set-theme INDEX-CASABLANCA))
 
 (defun my-theme-ubuntu ()
+  "Switch to the ubuntu theme."
   (interactive)
   (my-set-theme INDEX-UBUNTU))
 
-(defun color-change-dark ()
-  (interactive)
-  (my-set-theme INDEX-COLOR-CHANGE-DARK))
-
 (defun my-theme-elsa ()
+  "Switch to the elsa theme."
   (interactive)
   (my-set-theme INDEX-ELSA))
+
+(defalias 'color-change-dark #'my-theme-color-change-dark)
 
 (defun my-restart-ollama ()
   "Restart Ollama service and display status/output."
