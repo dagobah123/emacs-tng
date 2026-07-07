@@ -1,127 +1,114 @@
-;;; theme.el --- theme file  -*- lexical-binding: t; -*-
+;;; theme.el --- theme switching  -*- lexical-binding: t; -*-
 ;;; Commentary:
-;;; Theme file
+;;; State and commands for cycling and selecting the chiaroscuro theme
+;;; variants.  The single custom theme `chiaroscuro' reads
+;;; `INDEX-CHIAROSCURO' every time it is loaded and picks its palette
+;;; accordingly, so switching variants means: disable the theme, set
+;;; the index, load the theme again.
 
 ;;; Code:
 
-(setq INDEX-DEFAULT             1)
-(setq INDEX-ECLIPSE             2)
-(setq INDEX-COLOR-CHANGE-LIGHT  3)
-(setq INDEX-HIGH-CONTRAST       4)
-(setq INDEX-GRAY                5)
-(setq INDEX-LOW-CHROMA          6)
-(setq INDEX-BLUE                7)
-(setq INDEX-NEON                8)
-(setq INDEX-RED                 9)
-(setq INDEX-CASABLANCA         10)
-(setq INDEX-COLOR-CHANGE-DARK  11)
-(setq INDEX-ELSA               12)
-(setq INDEX-UBUNTU             13)
+;; Indices of the theme variants.  Index 0 means "no theme" (plain
+;; Emacs colors).  The order matches `themes-list-names' below and the
+;; dispatch table in chiaroscuro-theme.el.
+(defvar INDEX-DEFAULT             1)
+(defvar INDEX-ECLIPSE             2)
+(defvar INDEX-COLOR-CHANGE-LIGHT  3)
+(defvar INDEX-HIGH-CONTRAST       4)
+(defvar INDEX-GRAY                5)
+(defvar INDEX-LOW-CHROMA          6)
+(defvar INDEX-BLUE                7)
+(defvar INDEX-NEON                8)
+(defvar INDEX-RED                 9)
+(defvar INDEX-CASABLANCA         10)
+(defvar INDEX-COLOR-CHANGE-DARK  11)
+(defvar INDEX-ELSA               12)
+(defvar INDEX-UBUNTU             13)
 
-(setq INDEX-CHIAROSCURO 0)
-(setq theme-index 0)
+(defvar theme-index 0
+  "Index of the currently active theme variant (0 = no theme).")
+
+(defvar INDEX-CHIAROSCURO 0
+  "Copy of `theme-index' read by chiaroscuro-theme.el while it loads.")
+
+(defvar themes-list-names '("default"
+                            "eclipse"
+                            "color change light"
+                            "high contrast"
+                            "gray"
+                            "low chroma"
+                            "blue"
+                            "neon"
+                            "red"
+                            "casablanca"
+                            "color change dark"
+                            "elsa"
+                            "ubuntu")
+  "Display names of the theme variants, in index order.")
+
+(defvar number-of-themes (length themes-list-names)
+  "Number of available theme variants.")
 
 (defun my-reset-themes-index ()
-  "Reset themes index."
+  "Reset themes index and disable the theme."
   (interactive)
   (setq theme-index 0)
   (setq INDEX-CHIAROSCURO 0)
   (my-disable-themes))
 
 (defun my-set-theme (index)
-  "Set theme."
+  "Set theme variant INDEX and activate it."
   (interactive)
   (setq theme-index index)
   (setq INDEX-CHIAROSCURO index)
   (my-toggle-themes))
 
 (defun my-theme-down ()
-  "Theme down."
+  "Switch to the previous theme variant."
   (interactive)
   (setq theme-index (- theme-index 1))
   (setq INDEX-CHIAROSCURO (- INDEX-CHIAROSCURO 1))
   (my-toggle-themes))
 
 (defun my-theme-up ()
-  "Theme up."
+  "Switch to the next theme variant."
   (interactive)
   (setq theme-index (+ theme-index 1))
   (setq INDEX-CHIAROSCURO (+ INDEX-CHIAROSCURO 1))
   (my-toggle-themes))
 
 (defun my-disable-themes ()
-  "Disable themes."
+  "Disable the chiaroscuro theme."
   (interactive)
-  (setq loop-index 0)
-  (while (< loop-index number-of-themes)
-    (disable-theme (nth loop-index themes-list))
-    (setq loop-index (+ loop-index 1))))
+  (disable-theme 'chiaroscuro))
 
 (defun my-theme-loop ()
-  "Loop."
+  "Load the theme variant selected by `theme-index', if any."
   (interactive)
-  (setq loop-index 1)
-  (setq themes-list-index 0)
-  (while (<= loop-index number-of-themes)
-    (if (eq theme-index loop-index)
-        (progn
-          (load-theme (nth themes-list-index themes-list) t)
-          (message "%s" (nth themes-list-index themes-list-names))))
-    (setq loop-index (+ loop-index 1))
-    (setq themes-list-index (+ themes-list-index 1))))
+  (when (and (>= theme-index 1)
+             (<= theme-index number-of-themes))
+    (load-theme 'chiaroscuro t)
+    (message "%s" (nth (1- theme-index) themes-list-names))))
 
 (defun my-toggle-themes ()
-  "Toggle themes."
+  "Activate the theme variant selected by `theme-index'.
+Wraps around at both ends of the variant list; index 0 leaves the
+plain Emacs colors active."
   (interactive)
   (my-disable-themes)
 
-  (if (eq theme-index -1)
-      (progn (setq theme-index number-of-themes)))
+  (when (eq theme-index -1)
+    (setq theme-index number-of-themes))
 
-  (if (eq theme-index 0)
-      (progn (message "emacs")
-             (setq theme-index 0)
-             (setq INDEX-CHIAROSCURO 0)))
+  (when (eq theme-index 0)
+    (message "emacs")
+    (setq INDEX-CHIAROSCURO 0))
 
   (my-theme-loop)
 
-  (if (> theme-index number-of-themes)
-      (progn (message "emacs")
-             (setq theme-index 0)
-             (setq INDEX-CHIAROSCURO 0))))
-
-(defvar chiaroscuro-index 0 "Index representing the current theme")
-(setq chiaroscuro-index 0)
-
-(setq themes-list '(chiaroscuro
-                    chiaroscuro
-                    chiaroscuro
-                    chiaroscuro
-                    chiaroscuro
-                    chiaroscuro
-                    chiaroscuro
-                    chiaroscuro
-                    chiaroscuro
-                    chiaroscuro
-                    chiaroscuro
-                    chiaroscuro
-                    chiaroscuro))
-
-(setq themes-list-names '("default"
-                          "eclipse"
-                          "color change light"
-                          "high contrast"
-                          "gray"
-                          "low chroma"
-                          "blue"
-                          "neon"
-                          "red"
-                          "casablanca"
-                          "color change dark"
-                          "elsa"
-                          "ubuntu"))
-
-(defvar theme-index 0 "Index representing the current theme")
-(setq number-of-themes (length themes-list))
+  (when (> theme-index number-of-themes)
+    (message "emacs")
+    (setq theme-index 0)
+    (setq INDEX-CHIAROSCURO 0)))
 
 ;;; theme.el ends here
