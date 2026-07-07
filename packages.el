@@ -26,7 +26,7 @@
   :ensure t
   :init
   (helm-mode t)
-  (progn (setq helm-buffers-fuzzy-matching t))
+  (setq helm-buffers-fuzzy-matching t)
   :bind
   (("M-x" . helm-M-x))
   :delight " h")
@@ -60,6 +60,7 @@
 
 (use-package powershell
   :ensure t
+  :defer t
   :delight " po")
 
 (use-package expand-region
@@ -68,6 +69,7 @@
 
 (use-package csharp-mode
   :ensure t
+  :defer t
   :delight " c#")
 
 (use-package avy
@@ -108,8 +110,7 @@
   (diredfl-global-mode 1)
   :delight " df")
 
-(use-package lsp-java
-  :ensure t)
+;; lsp-java is declared in lsp.el together with its configuration.
 
 (use-package lsp-ui
   :ensure t)
@@ -130,22 +131,12 @@
   :ensure t)
 
 (use-package nov
-  :ensure t)
-
-;;;(use-package gptel
-;;;  :ensure t
-;;;  :config
-;;;  (setq gptel-model "gemini-2.5-flash")
-;;;  (setq gptel-backend (gptel-make-gemini "Gemini"
-;;;                        :key ""
-;;;                        :stream t)))
+  :ensure t
+  :defer t)
 
 (use-package gptel
   :ensure t
   :config
-  ;;;(gptel-make-gemini "Gemini"
-  ;;;  :key ""
-  ;;;  :stream t)
   (let ((ollama-bknd (gptel-make-ollama "Ollama-Local"
                        :host "localhost:11434"
                        :models '("qwen2.5-coder:7b")
@@ -181,96 +172,17 @@
   :ensure t
   :bind (("C-c a" . aidermacs-transient-menu)) ; Quick access to all aider commands
   :config
-  ;; 1. Set the default model for Ollama
+  ;; Set the default model for Ollama
   (setq aidermacs-args '("--model" "ollama/qwen2.5-coder"))
-  
-  ;; 2. Configure the backend to use Ollama's API endpoint
-  ;; Aider uses LiteLLM under the hood for Ollama support
-  (setenv "OLLAMA_API_BASE" "http://127.0.0.1:11434")
-
-  ;; 3. (Optional) UI Customizations
+  ;; UI customizations
   (setq aidermacs-backend 'vterm) ; Recommended for the best terminal experience
   (setq aidermacs-auto-save-buffers t))
 
-(add-to-list 'process-environment "OLLAMA_API_BASE=http://127.0.0.1:11434")
-
-(setq aidermacs-args '("--model" "ollama/qwen2.5-coder" "--edit-format" "diff"))
+;; Aider uses LiteLLM under the hood for Ollama support; set the
+;; endpoint at startup so every subprocess inherits it.
+(setenv "OLLAMA_API_BASE" "http://127.0.0.1:11434")
 
 (use-package vterm
-    :ensure t)
-
-;;;(use-package ellama
-;;;  :ensure t
-;;;  :bind ("C-c e" . ellama)
-;;;  ;; send last message in chat buffer with C-c C-c
-;;;  :hook (org-ctrl-c-ctrl-c-hook . ellama-chat-send-last-message)
-;;;  :init
-;;;  ;; setup key bindings
-;;;  ;; (setopt ellama-keymap-prefix "C-c e")
-;;;  ;; language you want ellama to translate to
-;;;  (setopt ellama-language "German")
-;;;  ;; could be llm-openai for example
-;;;  (require 'llm-ollama)
-;;;  (setopt ellama-provider
-;;;  	  (make-llm-ollama
-;;;  	   ;; this model should be pulled to use it
-;;;  	   ;; value should be the same as you print in terminal during pull
-;;;  	   :chat-model "llama3:8b-instruct-q8_0"
-;;;  	   :embedding-model "nomic-embed-text"
-;;;  	   :default-chat-non-standard-params '(("num_ctx" . 8192))))
-;;;  (setopt ellama-summarization-provider
-;;;  	  (make-llm-ollama
-;;;  	   :chat-model "qwen2.5:3b"
-;;;  	   :embedding-model "nomic-embed-text"
-;;;  	   :default-chat-non-standard-params '(("num_ctx" . 32768))))
-;;;  (setopt ellama-coding-provider
-;;;  	  (make-llm-ollama
-;;;  	   :chat-model "qwen2.5-coder:3b"
-;;;  	   :embedding-model "nomic-embed-text"
-;;;  	   :default-chat-non-standard-params '(("num_ctx" . 32768))))
-;;;  ;; Predefined llm providers for interactive switching.
-;;;  ;; You shouldn't add ollama providers here - it can be selected interactively
-;;;  ;; without it. It is just example.
-;;;  (setopt ellama-providers
-;;;  	  '(("zephyr" . (make-llm-ollama
-;;;  			 :chat-model "zephyr:7b-beta-q6_K"
-;;;  			 :embedding-model "zephyr:7b-beta-q6_K"))
-;;;  	    ("mistral" . (make-llm-ollama
-;;;  			  :chat-model "mistral:7b-instruct-v0.2-q6_K"
-;;;  			  :embedding-model "mistral:7b-instruct-v0.2-q6_K"))
-;;;  	    ("mixtral" . (make-llm-ollama
-;;;  			  :chat-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"
-;;;  			  :embedding-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"))))
-;;;  ;; Naming new sessions with llm
-;;;  (setopt ellama-naming-provider
-;;;  	  (make-llm-ollama
-;;;  	   :chat-model "llama3:8b-instruct-q8_0"
-;;;  	   :embedding-model "nomic-embed-text"
-;;;  	   :default-chat-non-standard-params '(("stop" . ("\n")))))
-;;;  (setopt ellama-naming-scheme 'ellama-generate-name-by-llm)
-;;;  ;; Translation llm provider
-;;;  (setopt ellama-translation-provider
-;;;  	  (make-llm-ollama
-;;;  	   :chat-model "qwen2.5:3b"
-;;;  	   :embedding-model "nomic-embed-text"
-;;;  	   :default-chat-non-standard-params
-;;;  	   '(("num_ctx" . 32768))))
-;;;  (setopt ellama-extraction-provider (make-llm-ollama
-;;;  				      :chat-model "qwen2.5-coder:7b-instruct-q8_0"
-;;;  				      :embedding-model "nomic-embed-text"
-;;;  				      :default-chat-non-standard-params
-;;;  				      '(("num_ctx" . 32768))))
-;;;  ;; customize display buffer behaviour
-;;;  ;; see ~(info "(elisp) Buffer Display Action Functions")~
-;;;  (setopt ellama-chat-display-action-function #'display-buffer-full-frame)
-;;;  (setopt ellama-instant-display-action-function #'display-buffer-at-bottom)
-;;;  :config
-;;;  ;; show ellama context in header line in all buffers
-;;;  (ellama-context-header-line-global-mode +1)
-;;;  ;; show ellama session id in header line in all buffers
-;;;  (ellama-session-header-line-global-mode +1)
-;;;  ;; handle scrolling events
-;;;  (advice-add 'pixel-scroll-precision :before #'ellama-disable-scroll)
-;;;  (advice-add 'end-of-buffer :after #'ellama-enable-scroll))
+  :ensure t)
 
 ;;; packages.el ends here
