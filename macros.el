@@ -1,6 +1,5 @@
-;;; macros.el --- keybindings file  -*- lexical-binding: t; -*-
-
-;;; Commentary:4cb0b3
+;;; macros.el --- macros file  -*- lexical-binding: t; -*-
+;;; Commentary:
 ;;; Macros file
 
 ;;; Code:
