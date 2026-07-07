@@ -29,6 +29,21 @@
 
   ("q" nil "Quit" :color blue))
 
+(defhydra hydra-custom (:hint nil :color red)
+
+  "
+  Custom
+
+  ^Custom^
+  ^^^^^---------------------
+  _1_: Custom
+  ^ ^
+  "
+
+  ("1" info)
+
+  ("q" nil "Quit" :color blue))
+
 (defhydra hydra-master (:color blue)
   ""
   ("c" hydra-custom/body "Custom")
