@@ -22,7 +22,6 @@
 (setq background-region "#bbffbb")
 (setq background-tooltip "#eeeeee")
 (setq text-delete "#ff0000")
-(setq text-directory "#000000")
 (setq text-highlight "#7f0055")
 (setq text-hl "#000000")
 (setq text-hl-low "#000000")

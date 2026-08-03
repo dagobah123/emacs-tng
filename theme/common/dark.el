@@ -4,10 +4,13 @@
 
 (load-file "~/.emacs.d/theme/common/variables.el")
 
+(setq background "#000000")
+
 (setq background-cursor "#ffffff")
 (setq background-directory "#000066")
 (setq background-fringe "#222222")
-(setq background-hl "#666600")
+;;;(setq background-hl "#666600")
+(setq background-hl "#222200")
 (setq background-hl-low "#0022aa")
 (setq background-low "#111111")
 (setq background-match-1 "#666600")
@@ -22,7 +25,6 @@
 (setq background-region "#962f1b")
 (setq background-tooltip "#111111")
 (setq text-delete "#992222")
-(setq text-directory "#5175b1")
 (setq text-highlight "#ff00ff")
 (setq text-highlight-3 "#00ff00")
 (setq text-hl "#ffff00")
