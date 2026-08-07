@@ -49,7 +49,7 @@
 (set-face-attribute 'font-lock-doc-markup-face nil :foreground text-font-lock-doc-markup-face)
 (set-face-attribute 'font-lock-escape-face nil :foreground text-font-lock-escape-face)
 (set-face-attribute 'font-lock-function-call-face nil :foreground text-font-lock-function-call-face)
-(set-face-attribute 'font-lock-function-name-face nil :foreground text-font-lock-function-name-face :bold t)
+(set-face-attribute 'font-lock-function-name-face nil :foreground text-font-lock-function-name-face)
 (set-face-attribute 'font-lock-keyword-face nil :foreground text-font-lock-keyword-face)
 (set-face-attribute 'font-lock-misc-punctuation-face nil :foreground text-font-lock-misc-punctuation-face)
 (set-face-attribute 'font-lock-negation-char-face nil :foreground text-font-lock-negation-char-face)
